@@ -1,0 +1,158 @@
+{
+  "schema": {
+    "_description": "Recon crawl of a web app, structured for AI extraction. All lists are deduplicated.",
+    "target": "the seed URL and hosts that were in scope",
+    "endpoints": "unique API/page endpoints as METHOD + path, with query params seen; the primary attack surface",
+    "forms": "HTML forms with their field names (input points)",
+    "params": "all URL parameter names seen anywhere",
+    "js_endpoints": "paths found INSIDE javascript, not linked on pages (often hidden/admin/internal)",
+    "js_secrets": "heuristic secret matches in JS - verify, many are false positives",
+    "notable_responses": "HTTP responses with status >= 400",
+    "storage": "localStorage/sessionStorage keys per page - may hold tokens/config"
+  },
+  "target": {
+    "seed": "https://app.smtp2go.com",
+    "hosts_in_scope": [
+      "app.smtp2go.com"
+    ],
+    "crawled_at": "2026-09-28 14:49:23"
+  },
+  "counts": {
+    "pages": 1,
+    "endpoints": 13,
+    "forms": 0,
+    "params": 2,
+    "js_files": 0,
+    "js_endpoints": 0,
+    "js_secrets": 0,
+    "notable_responses": 0
+  },
+  "pages": [
+    "https://app.smtp2go.com"
+  ],
+  "endpoints": [
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/new-login.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/login-soft.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-1.11.0.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-migrate-1.2.1.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery.blockui.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment-timezone-all-years.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/functions.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    }
+  ],
+  "forms": [],
+  "params": [
+    "v",
+    "version"
+  ],
+  "js_endpoints": [],
+  "js_secrets": [],
+  "notable_responses": [],
+  "storage": {}
+}

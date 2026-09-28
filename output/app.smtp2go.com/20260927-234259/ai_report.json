@@ -1,0 +1,370 @@
+{
+  "schema": {
+    "_description": "Recon crawl of a web app, structured for AI extraction. All lists are deduplicated.",
+    "target": "the seed URL and hosts that were in scope",
+    "endpoints": "unique API/page endpoints as METHOD + path, with query params seen; the primary attack surface",
+    "forms": "HTML forms with their field names (input points)",
+    "params": "all URL parameter names seen anywhere",
+    "js_endpoints": "paths found INSIDE javascript, not linked on pages (often hidden/admin/internal)",
+    "js_secrets": "heuristic secret matches in JS - verify, many are false positives",
+    "notable_responses": "HTTP responses with status >= 400",
+    "storage": "localStorage/sessionStorage keys per page - may hold tokens/config"
+  },
+  "target": {
+    "seed": "https://app.smtp2go.com",
+    "hosts_in_scope": [
+      "app-us.smtp2go.com",
+      "app.smtp2go.com"
+    ],
+    "crawled_at": "2026-09-27 23:44:04"
+  },
+  "counts": {
+    "pages": 2,
+    "endpoints": 34,
+    "forms": 2,
+    "params": 6,
+    "js_files": 10,
+    "js_endpoints": 1,
+    "js_secrets": 0,
+    "notable_responses": 0
+  },
+  "pages": [
+    "https://app-us.smtp2go.com/dashboard/main",
+    "https://app.smtp2go.com"
+  ],
+  "endpoints": [
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/main/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/notices/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/usage/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "POST",
+      "path": "/api/login",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/dashboard/main",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/dashboard/main/",
+      "params": [
+        "login_id"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/end-points",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/new-login.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/login-soft.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-1.11.0.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-migrate-1.2.1.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery.blockui.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment-timezone-all-years.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/functions.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "POST",
+      "path": "/zdesk_chat_auth",
+      "params": [
+        "CSRF_key"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "POST",
+      "path": "/api/login",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/new-login.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/login-soft.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-1.11.0.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-migrate-1.2.1.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery.blockui.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment-timezone-all-years.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/functions.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    }
+  ],
+  "forms": [
+    {
+      "method": "POST",
+      "action": "https://app.smtp2go.com/api/login/",
+      "found_on": "https://app.smtp2go.com",
+      "fields": [
+        "red_deep_link",
+        "red_deep_query",
+        "username",
+        "password",
+        "remember_me"
+      ]
+    },
+    {
+      "method": "POST",
+      "action": "https://app.smtp2go.com/forgot-password/",
+      "found_on": "https://app.smtp2go.com",
+      "fields": [
+        "email"
+      ]
+    }
+  ],
+  "params": [
+    "CSRF_key",
+    "login_id",
+    "unix_secs_end",
+    "unix_secs_start",
+    "v",
+    "version"
+  ],
+  "js_endpoints": [
+    "/dashboard/team/"
+  ],
+  "js_secrets": [],
+  "notable_responses": [],
+  "storage": {}
+}

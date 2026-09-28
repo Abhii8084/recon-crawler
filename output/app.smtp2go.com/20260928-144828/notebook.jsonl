@@ -1,0 +1,75 @@
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com", "resource_type": "document"}
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/login", "resource_type": "document"}
+{"time": "2026-09-28 14:48:29", "kind": "response", "url": "https://app.smtp2go.com", "status": 302, "has_body": false}
+{"time": "2026-09-28 14:48:29", "kind": "param", "name": "v", "seen_on": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966"}
+{"time": "2026-09-28 14:48:29", "kind": "param", "name": "version", "seen_on": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966"}
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966", "resource_type": "stylesheet"}
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:29", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/js/functions.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/login", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/js/functions.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:30", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790560966", "status": 200, "has_body": false}
+{"time": "2026-09-28 14:48:30", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:31", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:31", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:32", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:32", "kind": "start", "seed": "https://app.smtp2go.com", "host": "app.smtp2go.com", "workers": 5, "attached": true}
+{"time": "2026-09-28 14:48:36", "kind": "console", "type": "verbose", "text": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"}
+{"time": "2026-09-28 14:48:36", "kind": "console", "type": "verbose", "text": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"}
+{"time": "2026-09-28 14:48:43", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com", "resource_type": "document"}
+{"time": "2026-09-28 14:48:43", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/login", "resource_type": "document"}
+{"time": "2026-09-28 14:48:43", "kind": "response", "url": "https://app.smtp2go.com", "status": 302, "has_body": false}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966", "resource_type": "stylesheet"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/static/js/functions.js?version=1790560966", "resource_type": "script"}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790560966", "status": 200, "has_body": false}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/static/js/functions.js?version=1790560966", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "response", "url": "https://app.smtp2go.com/login", "status": 200, "has_body": true}
+{"time": "2026-09-28 14:48:44", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:45", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:46", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:46", "kind": "console", "type": "error", "text": "Failed to load resource: the server responded with a status of 404 ()"}
+{"time": "2026-09-28 14:48:48", "kind": "console", "type": "verbose", "text": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"}
+{"time": "2026-09-28 14:48:48", "kind": "console", "type": "verbose", "text": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o"}
+{"time": "2026-09-28 14:48:52", "kind": "console", "type": "warning", "text": "The resource https://www.smtp2go.com/assets/fonts/v3/opensans-bold-webfont.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."}
+{"time": "2026-09-28 14:48:52", "kind": "console", "type": "warning", "text": "The resource https://www.smtp2go.com/assets/fonts/v3/opensans-regular-webfont.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."}
+{"time": "2026-09-28 14:49:02", "kind": "scope_skip", "url": "https://www.smtp2go.com", "reason": "excluded post-login"}
+{"time": "2026-09-28 14:49:03", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com", "resource_type": "document"}
+{"time": "2026-09-28 14:49:04", "kind": "request", "method": "GET", "url": "https://app.smtp2go.com/login", "resource_type": "document"}
+{"time": "2026-09-28 14:49:04", "kind": "response", "url": "https://app.smtp2go.com", "status": 302, "has_body": false}
+{"time": "2026-09-28 14:49:23", "kind": "nav_error", "url": "https://app.smtp2go.com", "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://app.smtp2go.com/\", waiting until \"networkidle\"\n", "worker": 0}
+{"time": "2026-09-28 14:49:23", "kind": "done", "pages": 1, "js_endpoints": 0}

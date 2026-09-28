@@ -1,0 +1,4 @@
+# 1. launch debug Chrome (once per session) — this exact command worked for you:
+open -na "Google Chrome" --args --remote-debugging-port=9222 --user-data-dir="$HOME/recon-debug-chrome" --no-first-run --no-default-browser-check
+# 2. log into the target in that window, then:
+python3 recon_crawler.py <target> --scope scope.txt --attach 9222

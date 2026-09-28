@@ -1,0 +1,1189 @@
+{
+  "schema": {
+    "_description": "Recon crawl of a web app, structured for AI extraction. All lists are deduplicated.",
+    "target": "the seed URL and hosts that were in scope",
+    "endpoints": "unique API/page endpoints as METHOD + path, with query params seen; the primary attack surface",
+    "forms": "HTML forms with their field names (input points)",
+    "params": "all URL parameter names seen anywhere",
+    "js_endpoints": "paths found INSIDE javascript, not linked on pages (often hidden/admin/internal)",
+    "js_secrets": "heuristic secret matches in JS - verify, many are false positives",
+    "notable_responses": "HTTP responses with status >= 400",
+    "storage": "localStorage/sessionStorage keys per page - may hold tokens/config"
+  },
+  "target": {
+    "seed": "https://externalbeta2.emaplan.com/ema",
+    "hosts_in_scope": [
+      "externalbeta2.emaplan.com"
+    ],
+    "crawled_at": "2026-09-28 00:39:11"
+  },
+  "counts": {
+    "pages": 5,
+    "endpoints": 117,
+    "forms": 3,
+    "params": 30,
+    "js_files": 11,
+    "js_endpoints": 98,
+    "js_secrets": 1,
+    "notable_responses": 1
+  },
+  "pages": [
+    "http://emoneyadvisor.com",
+    "https://auth.externalbeta2.emaplan.com/help/login",
+    "https://auth.externalbeta2.emaplan.com/login/default",
+    "https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=jzd1j9GlsxoWIkywxsBsz6V7LvQpYe28xUt8lo1Ds_c&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3DJNmIUO4xYCnDmUgxacykrQjAI8LLNuDyy3yu2X7N-TxZJ4w2Bx482FRrqHEnNtrWC-b0y0CJs2YJwLRs80IB2hjdA3SrfUR6lat1wOQNy4UD5-P8aEp0BYjgJXRQXqtlPR1hYi2mEnAGTOh3XAxXvhas-WOM0si4SHcyWhFUWRAbLUq9s7VozK9dDV1GHrUFVunW6uz1h6_-GTqXkG3d-sHezI4qkBezdUW5a196or88TZqMEWwMYom0HtreGu6xagDa9hcB3X_ybLoKifoRL6uxv78WOgw_zbPvTJDDj4x4rYTQmuf-WHBEfHnmxnibO_4Aq44fakjTIawdlgbL6ggS2CyhsoBPRvKsFVIg0hKMgmE0rh335hy9daFaC2z1Tj7DSGrBIuZ-Jggep37mqx7CkaM2a4-2PtCgIRtXVGhbfGyHvpj0NQS5Nyz6ckax1z0DUM8ROwP3O3u_8oWJVKhG2WTxrbW3JYFgLeH1TMCyFDvzswP-Y82RM-7jPPe46aF3aLF6KWs-OX69Iq701v0tK3s1jy6PbdZwvANoML17uBcBcz0Mg_e9H2HUkuXDzpQl9BLuc5gw9YufQa8TVz6PBFXqgSftxkVPbmOIHC_41Ut1u3h-o_RwmW0hq9QM0i0Ex0MtVVV08qBT-NqGJ3H2T8pQmnQiiIMpsR0JBIn0RN6-sZjrboYoT1tjCmU5_3r4ot95emRcWhpu4UY4hs-Eb42tiUwMdHJhxBsYEZGbO6z5Vx3XXdO1E57C7gJC&response_mode=form_post&nonce=639261328547808898.ZTJhZjg2MGUtZmRlNi00NzdlLWFkNjktNGFhN2VjZThjZjIx&login_hint=H1Advisor01091&partner=ema&office=ema&logo=partner%2Fdefault%2FFiles%2FImages%2FIcons%2FPortalLogin.png&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0",
+    "https://externalbeta2.emaplan.com/ema"
+  ],
+  "endpoints": [
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "DELETE",
+      "path": "//api/v1/sessions/me",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/LAkp0ipvQa3Z-ozrLA/X5QY4SmX1VpQX0/MClz/dm/c8dVtMMmk",
+      "params": [],
+      "resource_type": "script"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/LAkp0ipvQa3Z-ozrLA/X5QY4SmX1VpQX0/MClz/dm/c8dVtMMmk",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/api/internal/brand/theme/style-sheet",
+      "params": [
+        "touch-point",
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/api/v1/internal/device/nonce",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/auth/services/devicefingerprint",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/help/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/idp/idx/challenge/answer",
+      "params": [],
+      "resource_type": "fetch"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/idp/idx/identify",
+      "params": [],
+      "resource_type": "fetch"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/idp/idx/introspect",
+      "params": [],
+      "resource_type": "fetch"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/login/default",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/login/token/redirect",
+      "params": [
+        "stateToken"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "auth.externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/oauth2/default/v1/authorize",
+      "params": [
+        "client_id",
+        "code_challenge",
+        "code_challenge_method",
+        "enable_spi_sso",
+        "login_hint",
+        "logo",
+        "nonce",
+        "office",
+        "partner",
+        "post_logout_redirect_uri",
+        "redirect_uri",
+        "response_mode",
+        "response_type",
+        "scope",
+        "state",
+        "x-client-SKU",
+        "x-client-ver"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/akam/13/115070e",
+      "params": [],
+      "resource_type": "script"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "POST",
+      "path": "/akam/13/pixel_115070e",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/dist/css/main.css",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/dist/fonts/Lexend-VariableFont_wght.ttf",
+      "params": [],
+      "resource_type": "font"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/dist/js/main.js",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/dist/static/svgs/chevron.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/src/static/svgs/back-to-top-arrow-icon-white.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/src/static/svgs/chevron-left.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/assets/src/static/svgs/search.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/emoney-happycog/emoney.css",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/happy-cog/assets/css/reset.css",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/themes/happy-cog/assets/js/back-to-top.js",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/02/Icon_Efficiency.json",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/02/Icon_Goal.json",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/02/Icon_People.json",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/02/Icon_Upward.json",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/03/emoney-nav-logo.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/04/emoney-nav-logo-white.svg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/06/cropped-emoney-favicon_1a2856-32x32.png",
+      "params": [],
+      "resource_type": "other"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/06/family-enjoying-time-together-at-home-on-a-tablet.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2023/06/person-working-at-a-desk-and-on-a-call.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/Aggregations_Homepage_product-capabilities.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/Lifetime-Portfolio-Value_Homepage_product-capabilities-1.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/Monte_Carlo_Homepage_product-capabilities.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/Plan-Summary_Homepage_product-capabilities.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/better-relationships-homepage-decision-center.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2024/08/present-what-if-home-page_2024update.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2025/08/Updated-Client-Portal-with-My-Plan_thin.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/aewealthmanagement-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/allianz-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/brf-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/ce-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/csenge-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/dpdynasty-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/fidelity-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/fnbo-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/hbwealth-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/merit-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/pacificlife-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/pag-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/triad-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/05/xypn-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/07/osaic-logo_update.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/LPL_logo_w.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/WEG_1.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/ameritas_logo_2.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/cambridge_corp.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/kestra-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/08/lincoln-investment-logo.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-content/uploads/2026/09/eMoney-Financial-Advisor-Meeting-home-hero_sm-3077x1330.jpg",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-includes/css/dist/block-library/common.min.css",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "emoneyadvisor.com",
+      "method": "GET",
+      "path": "/wp-includes/js/jquery/jquery.min.js",
+      "params": [
+        "ver"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA",
+      "params": [],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/akam/13/77a47caf",
+      "params": [],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/akam/13/pixel_77a47caf",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/Advisor/Home",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/Areas/SignIn/Content/Images/footer.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/Redirect/SignIn",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/SignIn",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/ema/SignIn",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/SignIn/Authentication/OktaSignIn",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/ema/api/v1/log/browser/event",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "POST",
+      "path": "/ema/authorization-code/callback",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/emx/IntegrationQuickTake/icon.png",
+      "params": [
+        "v"
+      ],
+      "resource_type": "image"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/partner/default/Files/Images/Header/AdvisorNavBarLogo.png",
+      "params": [
+        "v"
+      ],
+      "resource_type": "image"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/partner/default/Files/Images/Icons/PortalLogin.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/partner/default/IEFavoriteIcon.ico",
+      "params": [
+        "v"
+      ],
+      "resource_type": "other"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/Areas-SignIn-Content.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/Content-less-TransientNotifications.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/content-css-layout.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/emx-AdvisorHome.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/emx-Clients-AddClients.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/emx-Clients-SearchBox.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/emx-Feed.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/css/emx-PageLayout.css",
+      "params": [
+        "v"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/Areas-SignIn-Scripts-rsa.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/Areas-SignIn-Scripts.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/Scripts-areas-SignOut.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/bootstrap-ema.event-logger.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-AdvisorHome.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-Clients-AddClients.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-Clients-Searchbox.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-Errors.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-Feed.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-MenuBar.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-TypeAhead.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-_PageLayout.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-_PageLayoutBase.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx-eMoneyClient.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/emx.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/flourish-modal.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/global-error-logger.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/performance-timing-logger.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/scripts-core.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/scripts-mvc-validation-attribute.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/scripts-security.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/scripts-utilities.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/ema/wwwroot/scripts/templates.js",
+      "params": [
+        "v"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "externalbeta2.emaplan.com",
+      "method": "GET",
+      "path": "/resources/2ae272ef44bac2ec8bbcb635c08e5940399001269edb6",
+      "params": [],
+      "resource_type": "script"
+    },
+    {
+      "host": "trck.go.emoneyadvisor.com",
+      "method": "GET",
+      "path": "/visitor/v200/svrGP",
+      "params": [
+        "firstPartyCookieDomain",
+        "ms",
+        "optin",
+        "pps",
+        "ref",
+        "ref2",
+        "siteid",
+        "tzo"
+      ],
+      "resource_type": "image"
+    },
+    {
+      "host": "trck.go.emoneyadvisor.com",
+      "method": "GET",
+      "path": "/visitor/v200/svrGP.aspx",
+      "params": [
+        "elq1pcGUID",
+        "ms",
+        "optin",
+        "pps",
+        "ref",
+        "ref2",
+        "siteid",
+        "tzo"
+      ],
+      "resource_type": "image"
+    }
+  ],
+  "forms": [
+    {
+      "method": "POST",
+      "action": "https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize",
+      "found_on": "https://externalbeta2.emaplan.com/ema",
+      "fields": [
+        "identifier"
+      ]
+    },
+    {
+      "method": "POST",
+      "action": "https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize",
+      "found_on": "https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=jzd1j9GlsxoWIkywxsBsz6V7LvQpYe28xUt8lo1Ds_c&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3DJNmIUO4xYCnDmUgxacykrQjAI8LLNuDyy3yu2X7N-TxZJ4w2Bx482FRrqHEnNtrWC-b0y0CJs2YJwLRs80IB2hjdA3SrfUR6lat1wOQNy4UD5-P8aEp0BYjgJXRQXqtlPR1hYi2mEnAGTOh3XAxXvhas-WOM0si4SHcyWhFUWRAbLUq9s7VozK9dDV1GHrUFVunW6uz1h6_-GTqXkG3d-sHezI4qkBezdUW5a196or88TZqMEWwMYom0HtreGu6xagDa9hcB3X_ybLoKifoRL6uxv78WOgw_zbPvTJDDj4x4rYTQmuf-WHBEfHnmxnibO_4Aq44fakjTIawdlgbL6ggS2CyhsoBPRvKsFVIg0hKMgmE0rh335hy9daFaC2z1Tj7DSGrBIuZ-Jggep37mqx7CkaM2a4-2PtCgIRtXVGhbfGyHvpj0NQS5Nyz6ckax1z0DUM8ROwP3O3u_8oWJVKhG2WTxrbW3JYFgLeH1TMCyFDvzswP-Y82RM-7jPPe46aF3aLF6KWs-OX69Iq701v0tK3s1jy6PbdZwvANoML17uBcBcz0Mg_e9H2HUkuXDzpQl9BLuc5gw9YufQa8TVz6PBFXqgSftxkVPbmOIHC_41Ut1u3h-o_RwmW0hq9QM0i0Ex0MtVVV08qBT-NqGJ3H2T8pQmnQiiIMpsR0JBIn0RN6-sZjrboYoT1tjCmU5_3r4ot95emRcWhpu4UY4hs-Eb42tiUwMdHJhxBsYEZGbO6z5Vx3XXdO1E57C7gJC&response_mode=form_post&nonce=639261328547808898.ZTJhZjg2MGUtZmRlNi00NzdlLWFkNjktNGFhN2VjZThjZjIx&login_hint=H1Advisor01091&partner=ema&office=ema&logo=partner%2Fdefault%2FFiles%2FImages%2FIcons%2FPortalLogin.png&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0",
+      "fields": [
+        "identifier"
+      ]
+    },
+    {
+      "method": "POST",
+      "action": "https://auth.externalbeta2.emaplan.com/login/default",
+      "found_on": "https://auth.externalbeta2.emaplan.com/login/default",
+      "fields": [
+        "identifier"
+      ]
+    }
+  ],
+  "params": [
+    "client_id",
+    "code_challenge",
+    "code_challenge_method",
+    "elq1pcGUID",
+    "enable_spi_sso",
+    "firstPartyCookieDomain",
+    "login_hint",
+    "logo",
+    "ms",
+    "nonce",
+    "office",
+    "optin",
+    "partner",
+    "post_logout_redirect_uri",
+    "pps",
+    "redirect_uri",
+    "ref",
+    "ref2",
+    "response_mode",
+    "response_type",
+    "scope",
+    "siteid",
+    "state",
+    "stateToken",
+    "touch-point",
+    "tzo",
+    "v",
+    "ver",
+    "x-client-SKU",
+    "x-client-ver"
+  ],
+  "js_endpoints": [
+    "//fonts.googleapis.com/css",
+    "/admin/api/step-up/error",
+    "/admin/app/bulk-assign-clear",
+    "/admin/app/bulk-assign-post",
+    "/admin/apps/app-instance-autocomplete",
+    "/admin/groups/autocomplete",
+    "/admin/sso/step-up",
+    "/admin/users/search",
+    "/api/internal/su/orgs/",
+    "/api/v1/altcha",
+    "/api/v1/authn",
+    "/api/v1/authn/introspect",
+    "/api/v1/authn/recovery/password",
+    "/api/v1/authn/recovery/token",
+    "/api/v1/authn/recovery/unlock",
+    "/api/v1/registration/",
+    "/api/v1/registration/form",
+    "/api/v1/sessions/me",
+    "/api/v1/sessions/me/lifecycle/refresh",
+    "/api/v1/users",
+    "/auth/services/devicefingerprint",
+    "/help/login",
+    "/idp/idx/introspect",
+    "/idp/myaccount/emails",
+    "/idp/myaccount/emails/",
+    "/idp/myaccount/password",
+    "/idp/myaccount/phones",
+    "/idp/myaccount/phones/",
+    "/idp/myaccount/profile",
+    "/idp/myaccount/profile/schema",
+    "/img/logos/default.png",
+    "/img/security/default.png",
+    "/img/security/unknown-device.png",
+    "/img/security/unknown.png",
+    "/job/status",
+    "/joblist/status",
+    "/js/sections/timeout-worker-v1.js",
+    "/labels/json/",
+    "/login/getimage",
+    "/login/sessionCookieRedirect",
+    "/my/prefs/messages/",
+    "/oauth2",
+    "/oauth2/",
+    "/oauth2/default",
+    "/security/xsrf-token",
+    "/session/extend",
+    "/sso/idps/",
+    "/su/org/",
+    "/superOrgAdminPromotions/existingSuperOrgAdmins",
+    "/user-summary/",
+    "/usermail/sendmail/dialog",
+    "/v1/authorize",
+    "/v1/interact",
+    "/v1/logout",
+    "/v1/revoke",
+    "/v1/token",
+    "/v1/userinfo",
+    "http://a",
+    "http://a#б",
+    "http://a/c%20d?a=1&c=3",
+    "http://getfirefox.com",
+    "http://www.apple.com/safari/",
+    "http://www.google.com/chrome",
+    "http://www.microsoft.com/windows/internet-explorer/default.aspx",
+    "http://www.w3.org/2000/svg",
+    "http://x",
+    "http://тест",
+    "https://a@b",
+    "https://apps.apple.com/us/app/okta-verify/id490179405",
+    "https://c.go-mpulse.net/api/config.json",
+    "https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.otf",
+    "https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.woff",
+    "https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.woff2",
+    "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap\\",
+    "https://github.com/zloirock/core-js",
+    "https://github.com/zloirock/core-js/blob/v3.26.1/LICENSE",
+    "https://global.oktacdn.com/okta-signin-widget/",
+    "https://hcaptcha.com/1/api.js",
+    "https://hcaptcha.com/privacy",
+    "https://hcaptcha.com/terms",
+    "https://incode.id/privacy",
+    "https://incode.id/terms",
+    "https://itunes.apple.com/us/app/google-authenticator/id388497605",
+    "https://itunes.apple.com/us/app/okta-mobile/id580709251?mt=8",
+    "https://itunes.apple.com/us/app/okta-verify/id490179405",
+    "https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2",
+    "https://play.google.com/store/apps/details?id=com.okta.android.auth",
+    "https://withpersona.com/legal/privacy-policy",
+    "https://withpersona.com/legal/terms-of-use",
+    "https://www.clearme.com/member-terms",
+    "https://www.clearme.com/privacy-policy",
+    "https://www.duosecurity.com/docs/duoweb#3.-show-the-iframe",
+    "https://www.google.com/recaptcha/api.js",
+    "https://www.okta.com/okta-consumer-products-terms/",
+    "https://www.okta.com/privacy-policy/",
+    "https://{yourOktaDomain}.com/oauth2/{authServerId}",
+    "https://{yourOktaDomain}.com})"
+  ],
+  "js_secrets": [
+    {
+      "type": "Generic api_key",
+      "file": "https://ok10static2.oktacdn.com/assets/js/sdk/okta-signin-widget/7.48.2/js/okta-sign-in.min.js",
+      "match": "token\":\"enrollSymantecVip\""
+    }
+  ],
+  "notable_responses": [
+    {
+      "status": 404,
+      "url": "//api/v1/sessions/me",
+      "content_type": "application/json"
+    }
+  ],
+  "storage": {
+    "https://externalbeta2.emaplan.com/ema": {
+      "local": [
+        "ak_a",
+        "ak_ax"
+      ],
+      "session": [
+        "okta-transaction-storage"
+      ]
+    },
+    "https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=jzd1j9GlsxoWIkywxsBsz6V7LvQpYe28xUt8lo1Ds_c&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3DJNmIUO4xYCnDmUgxacykrQjAI8LLNuDyy3yu2X7N-TxZJ4w2Bx482FRrqHEnNtrWC-b0y0CJs2YJwLRs80IB2hjdA3SrfUR6lat1wOQNy4UD5-P8aEp0BYjgJXRQXqtlPR1hYi2mEnAGTOh3XAxXvhas-WOM0si4SHcyWhFUWRAbLUq9s7VozK9dDV1GHrUFVunW6uz1h6_-GTqXkG3d-sHezI4qkBezdUW5a196or88TZqMEWwMYom0HtreGu6xagDa9hcB3X_ybLoKifoRL6uxv78WOgw_zbPvTJDDj4x4rYTQmuf-WHBEfHnmxnibO_4Aq44fakjTIawdlgbL6ggS2CyhsoBPRvKsFVIg0hKMgmE0rh335hy9daFaC2z1Tj7DSGrBIuZ-Jggep37mqx7CkaM2a4-2PtCgIRtXVGhbfGyHvpj0NQS5Nyz6ckax1z0DUM8ROwP3O3u_8oWJVKhG2WTxrbW3JYFgLeH1TMCyFDvzswP-Y82RM-7jPPe46aF3aLF6KWs-OX69Iq701v0tK3s1jy6PbdZwvANoML17uBcBcz0Mg_e9H2HUkuXDzpQl9BLuc5gw9YufQa8TVz6PBFXqgSftxkVPbmOIHC_41Ut1u3h-o_RwmW0hq9QM0i0Ex0MtVVV08qBT-NqGJ3H2T8pQmnQiiIMpsR0JBIn0RN6-sZjrboYoT1tjCmU5_3r4ot95emRcWhpu4UY4hs-Eb42tiUwMdHJhxBsYEZGbO6z5Vx3XXdO1E57C7gJC&response_mode=form_post&nonce=639261328547808898.ZTJhZjg2MGUtZmRlNi00NzdlLWFkNjktNGFhN2VjZThjZjIx&login_hint=H1Advisor01091&partner=ema&office=ema&logo=partner%2Fdefault%2FFiles%2FImages%2FIcons%2FPortalLogin.png&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0": {
+      "local": [
+        "ak_a",
+        "ak_ax"
+      ],
+      "session": [
+        "okta-transaction-storage"
+      ]
+    },
+    "https://auth.externalbeta2.emaplan.com/help/login": {
+      "local": [
+        "ak_a",
+        "ak_ax"
+      ],
+      "session": []
+    },
+    "https://auth.externalbeta2.emaplan.com/login/default": {
+      "local": [
+        "ak_a",
+        "ak_ax"
+      ],
+      "session": [
+        "okta-transaction-storage"
+      ]
+    }
+  }
+}

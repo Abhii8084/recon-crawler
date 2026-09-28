@@ -1,0 +1,51 @@
+{"time": "2026-09-28 00:25:13", "kind": "start", "seed": "https://externalbeta2.emaplan.com/ema", "host": "externalbeta2.emaplan.com", "workers": 5}
+{"time": "2026-09-28 00:25:13", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema", "resource_type": "document"}
+{"time": "2026-09-28 00:25:16", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema", "resource_type": "document"}
+{"time": "2026-09-28 00:25:16", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema", "status": 301, "has_body": false}
+{"time": "2026-09-28 00:25:16", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/Redirect/SignIn", "resource_type": "document"}
+{"time": "2026-09-28 00:25:16", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema", "status": 302, "has_body": false}
+{"time": "2026-09-28 00:25:16", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/SignIn?ema", "resource_type": "document"}
+{"time": "2026-09-28 00:25:16", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/Redirect/SignIn", "status": 302, "has_body": false}
+{"time": "2026-09-28 00:25:17", "kind": "param", "name": "v", "seen_on": "https://externalbeta2.emaplan.com/ema/wwwroot/css/Areas-SignIn-Content.css?v=eb2d6f523d"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/css/Areas-SignIn-Content.css?v=eb2d6f523d", "resource_type": "stylesheet"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/resources/2ae272ef44bac2ec8bbcb635c08e5940399001269edb6", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/global-error-logger.js?v=d66946b12f", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/akam/13/77a47cae", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/partner/default/Files/Images/Icons/PortalLogin.png", "resource_type": "image"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/scripts-utilities.js?v=be00e3e84a", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Scripts-areas-SignOut.js?v=0db9e59466", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/emx-eMoneyClient.js?v=ec2e995c30", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Areas-SignIn-Scripts-rsa.js?v=321ccb6be5", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Areas-SignIn-Scripts.js?v=7c1a46cf2c", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "resource_type": "script"}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/SignIn?ema", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/css/Areas-SignIn-Content.css?v=eb2d6f523d", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/partner/default/Files/Images/Icons/PortalLogin.png", "status": 200, "has_body": false}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/global-error-logger.js?v=d66946b12f", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/resources/2ae272ef44bac2ec8bbcb635c08e5940399001269edb6", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/scripts-utilities.js?v=be00e3e84a", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:17", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Scripts-areas-SignOut.js?v=0db9e59466", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:18", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/emx-eMoneyClient.js?v=ec2e995c30", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:18", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Areas-SignIn-Scripts-rsa.js?v=321ccb6be5", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:18", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/wwwroot/scripts/Areas-SignIn-Scripts.js?v=7c1a46cf2c", "status": 200, "has_body": false}
+{"time": "2026-09-28 00:25:18", "kind": "console", "type": "log", "text": "global error logger initialized"}
+{"time": "2026-09-28 00:25:20", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:20", "kind": "response", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "status": 200, "has_body": false}
+{"time": "2026-09-28 00:25:20", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/Areas/SignIn/Content/Images/footer.png", "resource_type": "image"}
+{"time": "2026-09-28 00:25:20", "kind": "response", "url": "https://externalbeta2.emaplan.com/akam/13/77a47cae", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:21", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/Areas/SignIn/Content/Images/footer.png", "status": 200, "has_body": false}
+{"time": "2026-09-28 00:25:21", "kind": "request", "method": "GET", "url": "https://externalbeta2.emaplan.com/ema/partner/default/IEFavoriteIcon.ico?v=103111518623", "resource_type": "other"}
+{"time": "2026-09-28 00:25:21", "kind": "console", "type": "warning", "text": "<meta name=\"apple-mobile-web-app-capable\" content=\"yes\"> is deprecated. Please include <meta name=\"mobile-web-app-capable\" content=\"yes\">"}
+{"time": "2026-09-28 00:25:21", "kind": "response", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "status": 201, "has_body": true}
+{"time": "2026-09-28 00:25:21", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/akam/13/pixel_77a47cae", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:21", "kind": "response", "url": "https://externalbeta2.emaplan.com/ema/partner/default/IEFavoriteIcon.ico?v=103111518623", "status": 200, "has_body": false}
+{"time": "2026-09-28 00:25:21", "kind": "response", "url": "https://externalbeta2.emaplan.com/akam/13/pixel_77a47cae", "status": 200, "has_body": true}
+{"time": "2026-09-28 00:25:21", "kind": "console", "type": "endGroup", "text": "{}"}
+{"time": "2026-09-28 00:25:21", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:21", "kind": "response", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "status": 201, "has_body": true}
+{"time": "2026-09-28 00:25:30", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:30", "kind": "response", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "status": 201, "has_body": true}
+{"time": "2026-09-28 00:25:30", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:30", "kind": "request", "method": "DELETE", "url": "https://auth.externalbeta2.emaplan.com//api/v1/sessions/me", "resource_type": "xhr"}
+{"time": "2026-09-28 00:25:31", "kind": "response", "url": "https://externalbeta2.emaplan.com/L5CyF_/alv87/O4KgF/KA/3DaYrXfG9tXhtGai/QV4AAQ/dC4/vDBANDlA", "status": 201, "has_body": true}
+{"time": "2026-09-28 00:25:31", "kind": "request", "method": "POST", "url": "https://externalbeta2.emaplan.com/ema/SignIn?ema", "resource_type": "document"}

@@ -1,0 +1,1928 @@
+{
+  "schema": {
+    "_description": "Recon crawl of a web app, structured for AI extraction. All lists are deduplicated.",
+    "target": "the seed URL and hosts that were in scope",
+    "endpoints": "unique API/page endpoints as METHOD + path, with query params seen; the primary attack surface",
+    "forms": "HTML forms with their field names (input points)",
+    "params": "all URL parameter names seen anywhere",
+    "js_endpoints": "paths found INSIDE javascript, not linked on pages (often hidden/admin/internal)",
+    "js_secrets": "heuristic secret matches in JS - verify, many are false positives",
+    "notable_responses": "HTTP responses with status >= 400",
+    "storage": "localStorage/sessionStorage keys per page - may hold tokens/config"
+  },
+  "target": {
+    "seed": "https://app.smtp2go.com",
+    "hosts_in_scope": [
+      "app-us.smtp2go.com",
+      "app.smtp2go.com"
+    ],
+    "crawled_at": "2026-09-28 14:54:08"
+  },
+  "counts": {
+    "pages": 34,
+    "endpoints": 194,
+    "forms": 2,
+    "params": 24,
+    "js_files": 33,
+    "js_endpoints": 99,
+    "js_secrets": 0,
+    "notable_responses": 0
+  },
+  "pages": [
+    "https://app-us.smtp2go.com/account",
+    "https://app-us.smtp2go.com/account/2fa",
+    "https://app-us.smtp2go.com/account/changeplan",
+    "https://app-us.smtp2go.com/account/changeplan/?auto_checkout=1",
+    "https://app-us.smtp2go.com/account/team",
+    "https://app-us.smtp2go.com/account/updatebilling",
+    "https://app-us.smtp2go.com/compliance",
+    "https://app-us.smtp2go.com/dashboard/main",
+    "https://app-us.smtp2go.com/dashboard/main/?None=",
+    "https://app-us.smtp2go.com/email-testing",
+    "https://app-us.smtp2go.com/reports/activity",
+    "https://app-us.smtp2go.com/reports/archive",
+    "https://app-us.smtp2go.com/reports/charts",
+    "https://app-us.smtp2go.com/reports/data-exports",
+    "https://app-us.smtp2go.com/reports/sms",
+    "https://app-us.smtp2go.com/reports/summary",
+    "https://app-us.smtp2go.com/reports/summary/?filter=sender_email&date_filter=30days",
+    "https://app-us.smtp2go.com/reports/suppressions",
+    "https://app-us.smtp2go.com/sending",
+    "https://app-us.smtp2go.com/sending/apikeys",
+    "https://app-us.smtp2go.com/sending/ipauth",
+    "https://app-us.smtp2go.com/sending/sms_settings",
+    "https://app-us.smtp2go.com/sending/smtp_users",
+    "https://app-us.smtp2go.com/sending/verified_senders",
+    "https://app-us.smtp2go.com/settings/authentication",
+    "https://app-us.smtp2go.com/settings/dedicatedips",
+    "https://app-us.smtp2go.com/settings/display",
+    "https://app-us.smtp2go.com/settings/integrations",
+    "https://app-us.smtp2go.com/settings/sendingoptions",
+    "https://app-us.smtp2go.com/settings/subaccounts",
+    "https://app-us.smtp2go.com/settings/templates",
+    "https://app-us.smtp2go.com/settings/webhooks",
+    "https://app-us.smtp2go.com/support-zdsso",
+    "https://app.smtp2go.com"
+  ],
+  "endpoints": [
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account/2fa",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account/changeplan",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account/changeplan/",
+      "params": [
+        "auto_checkout"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account/team",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/account/updatebilling",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/edit_account/dpa",
+      "params": [],
+      "resource_type": "fetch"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/main/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/notices/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/dashboard/usage/",
+      "params": [
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "POST",
+      "path": "/api/login",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/reports/suppression/",
+      "params": [
+        "CSRF_key",
+        "action",
+        "client_timezone",
+        "continue_token",
+        "file_type",
+        "recipient_search",
+        "shown_columns",
+        "shown_events%5B%5D",
+        "shown_records",
+        "unix_secs_end",
+        "unix_secs_start"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "POST",
+      "path": "/api/settings/api_users/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/data_format",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/dedicatedips/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/ipallowlist/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/ipauth_users/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/sendingoptions/",
+      "params": [
+        "login_id"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/smtp_users/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/subaccounts/",
+      "params": [
+        "CSRF_key",
+        "action",
+        "continue_token",
+        "page_size",
+        "search_term",
+        "shown_columns",
+        "shown_records",
+        "state_to_display"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/team/",
+      "params": [
+        "CSRF_key"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/api/settings/webhooks/",
+      "params": [
+        "CSRF_key",
+        "action"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/compliance",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/compliance/",
+      "params": [
+        "action",
+        "url"
+      ],
+      "resource_type": "fetch"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/dashboard/main",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/dashboard/main/",
+      "params": [
+        "None",
+        "login_id"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/email-testing",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/end-points",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/activity",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/archive",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/charts",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/data-exports",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/sms",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/summary",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/summary/",
+      "params": [
+        "date_filter",
+        "filter"
+      ],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/reports/suppressions",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending/apikeys",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending/ipauth",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending/sms_settings",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending/smtp_users",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/sending/verified_senders",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/authentication",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/dedicatedips",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/display",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/integrations",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/sendingoptions",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/subaccounts",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/templates",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/settings/webhooks",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/dialog-special.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/flags-icons.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/layout-bleed.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/modules/dropdown-users.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/responsive.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/tabs-boxed.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-buttons.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-dropdowns.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-form.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-icons.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-modals.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/elements-page.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/helpers.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/reset.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/layout/css/upgrade/vars.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/compliance.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/email-details.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/email-templates.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/email-testing.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/indicators.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/screenshots.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/search-grouped.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/sendingoptions.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/splash.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/summary.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/suppressions.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/table-options.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/users.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/webhooks.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/bootstrap-tagsinput.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/clipboard.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/ace/src-noconflict/ace.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/daterangepicker/daterangepicker-custom.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/daterangepicker/daterangepicker-custom.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/mustache/mustache.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/qrcode/qrcode.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/riotjs/riot+compiler.3.9.1.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/stupidtable/stupidtable.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/tcrs-marks.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/tcrs-moving-tooltip.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/toolcool-range-slider.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/css/custom-chart.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/css/daterange-group.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/css/flags.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/css/picker.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/SVGPanZoom.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/date.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/daterange-group.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/extras.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/generic_custom.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/layout/settings_general.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/demographic-chart.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/filter-chart-subaccountdrop.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/main.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/persubaccount-chart.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/peruser-chart.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/charts/usage-chart.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/filter-eventdrop.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/filter-subaccountdrop.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/filter-userdrop.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/ip-allow-list/edit.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/ip-allow-list/table.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/mixins.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/riot/webhooks.tag",
+      "params": [
+        "version"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/settings_data_format.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/summary-export-download.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/alert-sign.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-au.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-ca.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-nz.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-shared.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-uk.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/flag-us.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/graphic-contactus-success.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/highlight.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/icon-flags.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/integration-figure-cpanel@2x.webp",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/integration-figure-slack@2x.webp",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/integration-figure-wordpress@2x.webp",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/paper-plane.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-2fa.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-2fa@2x.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-activityduration.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-archives.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-archivingduration.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-emailtemplates.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-sms.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-smsmessaging-senderids.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-smsmessaging-topup.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-subaccounts.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-subaccounts@2x.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-testing.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-userid.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/smtp2go_assets/splash-webhooks.png",
+      "params": [],
+      "resource_type": "image"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/archive/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/sms/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/sms/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/sms/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/suppression/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/suppression/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/reports/suppression/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/sending/sms-settings/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/sending/sms-settings/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/sending/sms-settings/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/2fa/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/2fa/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/2fa/vendor.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/2fa/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/api-auth/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/api-auth/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/api-auth/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/email-templates/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/email-templates/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/email-templates/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/ip-auth/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/ip-auth/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/ip-auth/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/subaccounts/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/subaccounts/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/settings/subaccounts/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/team-app/main.css",
+      "params": [
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/team-app/main.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/static/vue/team-app/vendor.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "GET",
+      "path": "/support-zdsso",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app-us.smtp2go.com",
+      "method": "POST",
+      "path": "/zdesk_chat_auth",
+      "params": [
+        "CSRF_key"
+      ],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "POST",
+      "path": "/api/login",
+      "params": [],
+      "resource_type": "xhr"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/login",
+      "params": [],
+      "resource_type": "document"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/css/new-login.css",
+      "params": [
+        "v",
+        "version"
+      ],
+      "resource_type": "stylesheet"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/admin/pages/scripts/login-soft.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-1.11.0.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-migrate-1.2.1.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/jquery.blockui.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment-timezone-all-years.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/assets/global/plugins/moment.min.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    },
+    {
+      "host": "app.smtp2go.com",
+      "method": "GET",
+      "path": "/static/js/functions.js",
+      "params": [
+        "version"
+      ],
+      "resource_type": "script"
+    }
+  ],
+  "forms": [
+    {
+      "method": "POST",
+      "action": "https://app.smtp2go.com/api/login/",
+      "found_on": "https://app.smtp2go.com",
+      "fields": [
+        "red_deep_link",
+        "red_deep_query",
+        "username",
+        "password",
+        "remember_me"
+      ]
+    },
+    {
+      "method": "POST",
+      "action": "https://app.smtp2go.com/forgot-password/",
+      "found_on": "https://app.smtp2go.com",
+      "fields": [
+        "email"
+      ]
+    }
+  ],
+  "params": [
+    "CSRF_key",
+    "None",
+    "action",
+    "auto_checkout",
+    "client_timezone",
+    "continue_token",
+    "date_filter",
+    "file_type",
+    "filter",
+    "login_id",
+    "m",
+    "p",
+    "page_size",
+    "recipient_search",
+    "search_term",
+    "shown_columns",
+    "shown_events%5B%5D",
+    "shown_records",
+    "state_to_display",
+    "unix_secs_end",
+    "unix_secs_start",
+    "url",
+    "v",
+    "version"
+  ],
+  "js_endpoints": [
+    "/_/service_worker",
+    "/_/service_worker/",
+    "/ag/g/c",
+    "/api/dashboard/dismiss-downgrade-banner/",
+    "/api/dashboard/main/",
+    "/as/d/ccm/conversion",
+    "/as/p/c",
+    "/ccm/collect",
+    "/ccm/conversion",
+    "/ccm/form-data",
+    "/ccm/s/collect",
+    "/d/ccm/form-data",
+    "/dashboard/main/",
+    "/dashboard/notices/",
+    "/dashboard/team/",
+    "/dashboard/usage/",
+    "/ddm/activity",
+    "/g/collect",
+    "/g/d/ccm/conversion",
+    "/ga/g/c",
+    "/gs/ccm/conversion",
+    "/gtag/destination",
+    "/gtag/js",
+    "/measurement/conversion",
+    "/measurement/enhanced",
+    "/p/action/",
+    "/pagead/1p-conversion",
+    "/pagead/conversion",
+    "/pagead/form-data",
+    "/pagead/set_partitioned_cookie",
+    "/pagead/uconversion",
+    "/pagead/viewthroughconversion",
+    "/public/estManifest",
+    "/rmkt/collect",
+    "/settings/subaccounts/",
+    "/static/assets/",
+    "/travel/flights/click/conversion",
+    "http://www.w3.org/2000/svg",
+    "https://${n}/embeddable/zendesk_host",
+    "https://45hj7q5l4w10.statuspage.io/embed/frame",
+    "https://Electron",
+    "https://aba337625608d678c785a8649566e231@o4507427284123728.ingest.de.sentry.io/4507427362963540",
+    "https://ad.doubleclick.net/activity;",
+    "https://ade.googlesyndication.com",
+    "https://ads.reddit.com",
+    "https://adservice.google.com/pagead/regclk",
+    "https://alb.reddit.com/rp",
+    "https://alb.reddit.com/rp.gif",
+    "https://announcekit.app",
+    "https://announcekit.app/?utm_source=${t}&utm_medium=referral&utm_campaign=powered-by",
+    "https://bat.bing.com/p/insights/c/k",
+    "https://bat.bing.com/p/insights/s/0.8.70",
+    "https://bat.bing.com/p/insights/t/",
+    "https://cct.google/taggy/agent.js",
+    "https://clarity.microsoft.com/js/",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://developers.smtp2go.com/",
+    "https://ekr.zdassets.com/compose/${t}",
+    "https://fonts.googleapis.com/css?family=${e}:400,500,600,700&subset=latin-ext,cyrillic,cyrillic-ext&display=swap",
+    "https://m.youtube.com",
+    "https://pagead2.googlesyndication.com",
+    "https://pagead2.googlesyndication.com/pagead/gen_204?id=tcfe",
+    "https://pixel-config.reddit.com/pixels",
+    "https://static.zdassets.com/ekr/",
+    "https://support.smtp2go.com/hc/en-gb/articles/115003599568",
+    "https://support.smtp2go.com/hc/en-gb/articles/223087607",
+    "https://support.smtp2go.com/hc/en-gb/articles/223087727-Bounce-Spam-Percentages-and-Ratings",
+    "https://support.smtp2go.com/hc/en-gb/articles/360003124714-Open-Tracking",
+    "https://support.smtp2go.com/hc/en-gb/articles/900002237106",
+    "https://ui.ads.microsoft.com",
+    "https://v2.zopim.com/w?${this.zopimKey}",
+    "https://www.facebook.com/tr/",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587324798\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3Kdrnjf3-nx51tSkrT0Nk2xuecAAR6TvNvc8mgxs0cNKrCSc-vLax3eVpi8HxTd-azNaROKtRliSzTXS-oHFn_IR8VxGSzbV6iLbupN6cVU8x4TM1nqjYDNuAG_MpaIINJJzG5AoZMqnwZhJLbNsRSAhiazScrK9UwwOqiliyEX0au6HiRd8NZ07V0P9nRqaHWXJ2KpWwGeZleqVGKEEbEdP5eTTKivV5NF8GscMePXCdVIHfCVBeZbnqDTR-pY7F3WBF_aPo8A81T64mc3U9hMyMUXaZjlwEgc_Q5RHq8iRv72AkpEHg0bbDDjILuHvdlLQktBA\\x26random\\x3d745525637\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587324820\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_start\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_start\\x26gap.fsrc\\x3d1\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3IlHBQt_YGp3klEVCeHdb8PkgtE1h0b0NT3DH0BeNcSx7Ns_ng65w_kOzpCyJ1tPcPRdFHXUxENTFR4j41Kkml_uYbMWFnbYEXVslSuo-ZmXu5-a-9022InOp7eBTxcNuQaggTrT7Ih0Tjgi081YLM7fwbMyegenv07ZymFv1lsfwHYmSkgGPMOZNN4XHTPDAuUbD5VznCJ4F_-2JkFzsLx9ugm7YRCYJgomkZU0N5-Nvx8xu3qN4DmuTj0Hz0eKGOGmKXiafYiZagBKHkniK59H_Q78K_oUKdWhWor5NFdjE7qN6eKfKWlg7oEh1f2J5mAnU6gv\\x26random\\x3d3279076572\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587324824\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_submit\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_submit\\x26gap.fsrc\\x3d2\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3Hme0B733RnZw83O2As1oZbANN68Hkl5dua9sF-Nivcr8b1eQOX1IEzkD5zvSr-FNQs9CT2Tg9Ya2DM2OKiigu5HIAass5xkbtbjLdTmXF9gxna-QlPT0IkpHI_yCd1xKnpVXaPW2w3QAymTkMlDJQxaBvR_4UM2K5RTqbTGqeY8pGk0hcJM8JhDlL2YvPCcMkcfRKz8HY_0s2CKcn4bfSbg1SRpaV_dRA57VaTEM-C616WkX870zLdMirxDdL__IeXUgmrERGIJlpZHdF86_dw43yXDctSW6qPfT-Rxi_pbLzLRwC6amyttrn08e_9m9ctUqo3Z\\x26random\\x3d33006494\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587337706\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d10\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3OiGxeBg-m6PzOmqdcmj3vPQrZNyBFSpp_U32TGq9Ybfiy5gPih_6idUDkcoO9zkWxjnHRwgU25Kpp9Xl7LiG193wB8cHI_qK9fAPLtDNEhQ5KjYQktNpYWlxVxNysftquFlF77XbFklpPj1z8--SXZSrKNviO2LuAMgEevhG1N4SMh53jRuEWYI0ftfh0oTj7Iw74q_aHjOHI5_bGrbE4TYNZ6uxuElo6FwFMwTNoKO4zR69FdKQ7kpDt1NvXDQl8NKgkYUg3urgfmgQxlJ0JBe6oiW4eJhbyg4NiOiNfC_v79hD87cgxbzAQBBnMYHhVcC7UdS\\x26random\\x3d2567710181\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587402849\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3FsiELsEa3DsrBALVRuCSK6vL9gOiKNFLVzMCmeADthFjQV17GquLtPYMyOZnq5Ix0yLESa4tTyYPvqNYFs_YToHgBsY6qjLJc8QHCaG_IL2yuKGX4o_BcSAVVBRdlTdvBV5qVybX3BieSnk9WhnwWDEOqVhcLTLmy1-qIe44kA3HL-qUqidV6cEQiCrJckhRzYLQvxYBnkpgsT2Y3o7kmh_wX0bqg79onRFMkDklQQQ35_HyPyd0LoZMHQ3U3hGuN0K0XDyiAX8k_laIGmk3iisp05bS02RazDvxtSBeTECyNhngwiLoBocVmjXSOaJEb78MzW4\\x26random\\x3d3637030327\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587403746\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_start\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_start\\x26gap.fsrc\\x3d1\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3FqTurJ02cAY871GY6UPvKUTEpQBp0bBdduTKy49cvPn9BRWl049twfmiZSrM2eRsWAf_98WTSEpTnxzSBQwyE5ousKmjhAJMQfq710bh6D3XwDAgT5R1WpLucu1R2QE8LxjZwse1fNGHzb_wXsScXWMypRq7QdH7vgEocgJ1DyqayQjqvugr1h8cHoUecIEpU922ee86FZKyavqeW8bJd8CkYC5e5HDLcD4UAGhvy8ZxjEjBXKYTaq0wl6-1g7OX_2DhFvCBBzizx37z7etQIO6kGYuYvXKrW0VcO0jb7rxKqwTpTk_MbcLYazxO96rU8h3Bw-q\\x26random\\x3d747637782\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587403750\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_submit\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_submit\\x26gap.fsrc\\x3d2\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3HB6oMdOYN0sTLekCXXoBzQAL_qNeKVZfK_vfhQc2lzfRQaWEJILWdaWCj4pCng5HN6VX_BjT7ZHKsjOtyt_cHsPytPqX5cIF8rPWqiVoHje5sSgDYRPk1sPoTkEqVHn2-kBKvGtHFK3ZZVMH38MZE3ahnXf3O8cbHurph6QtKkT9Mkh2h_SOcPOmKXWvhkysbPBtEbLpJtJypdF2LfDaN9oyAj1Yfpjv2Yl4ktRAb6D7Wpxcm4FjicT4IDj9dlxhwdbTZCNriSdoOBpNbF3SSI19aDM0jpPJyXTb95VdwaBq7IHrwUQ5jdGkLmIXncVLd4QxgGp\\x26random\\x3d1532877886\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.co.in/pagead/1p-user-list/700498227/?random\\x3d1790587416392\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F\\x26rcb\\x3d3\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3GuQirYFvAdVBOhjj_9_H415dBLjkVmax2u_iMbNlSukxAOlf-slMHGYhInzlwDL_KUFfjIAn5G0ldvCg5f6M2IBkHH-4Myn9tQmS-xCmV7V8VfTFzKEap76V2xWA1pqRmMdonP7nLHLn_3yp98Q_3WLfayYKszAMhqeV_3GAiK_WObDlWDsAYxf63HxEiNvUnbVpT0iczpWGHqdM92Gb6roiiiD7v5c5zcWXSIkSQD2r1wb-NIn5uiPpyOv-DNWlHoK5fdoqJGl6a7MroloCSYxh5tDmi9BSTKYlxrLnJi36Pe9bpJqRtqLIZ7sgBIXjvr3FTJL\\x26random\\x3d1600838748\\x26rmt_tld\\x3d1\\x26ipr\\x3dy",
+    "https://www.google.com",
+    "https://www.google.com/",
+    "https://www.google.com/ccm/geo",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587324798\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3Kdrnjf3-nx51tSkrT0Nk2xuecAAR6TvNvc8mgxs0cNKrCSc-vLax3eVpi8HxTd-azNaROKtRliSzTXS-oHFn_IR8VxGSzbV6iLbupN6cVU8x4TM1nqjYDNuAG_MpaIINJJzG5AoZMqnwZhJLbNsRSAhiazScrK9UwwOqiliyEX0au6HiRd8NZ07V0P9nRqaHWXJ2KpWwGeZleqVGKEEbEdP5eTTKivV5NF8GscMePXCdVIHfCVBeZbnqDTR-pY7F3WBF_aPo8A81T64mc3U9hMyMUXaZjlwEgc_Q5RHq8iRv72AkpEHg0bbDDjILuHvdlLQktBA\\x26random\\x3d745525637\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587324820\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_start\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_start\\x26gap.fsrc\\x3d1\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3IlHBQt_YGp3klEVCeHdb8PkgtE1h0b0NT3DH0BeNcSx7Ns_ng65w_kOzpCyJ1tPcPRdFHXUxENTFR4j41Kkml_uYbMWFnbYEXVslSuo-ZmXu5-a-9022InOp7eBTxcNuQaggTrT7Ih0Tjgi081YLM7fwbMyegenv07ZymFv1lsfwHYmSkgGPMOZNN4XHTPDAuUbD5VznCJ4F_-2JkFzsLx9ugm7YRCYJgomkZU0N5-Nvx8xu3qN4DmuTj0Hz0eKGOGmKXiafYiZagBKHkniK59H_Q78K_oUKdWhWor5NFdjE7qN6eKfKWlg7oEh1f2J5mAnU6gv\\x26random\\x3d3279076572\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587324824\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_submit\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d3440\\x26u_h\\x3d1440\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d1\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_submit\\x26gap.fsrc\\x3d2\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3Hme0B733RnZw83O2As1oZbANN68Hkl5dua9sF-Nivcr8b1eQOX1IEzkD5zvSr-FNQs9CT2Tg9Ya2DM2OKiigu5HIAass5xkbtbjLdTmXF9gxna-QlPT0IkpHI_yCd1xKnpVXaPW2w3QAymTkMlDJQxaBvR_4UM2K5RTqbTGqeY8pGk0hcJM8JhDlL2YvPCcMkcfRKz8HY_0s2CKcn4bfSbg1SRpaV_dRA57VaTEM-C616WkX870zLdMirxDdL__IeXUgmrERGIJlpZHdF86_dw43yXDctSW6qPfT-Rxi_pbLzLRwC6amyttrn08e_9m9ctUqo3Z\\x26random\\x3d33006494\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587337706\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F%3FNone%3D\\x26rcb\\x3d10\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3OiGxeBg-m6PzOmqdcmj3vPQrZNyBFSpp_U32TGq9Ybfiy5gPih_6idUDkcoO9zkWxjnHRwgU25Kpp9Xl7LiG193wB8cHI_qK9fAPLtDNEhQ5KjYQktNpYWlxVxNysftquFlF77XbFklpPj1z8--SXZSrKNviO2LuAMgEevhG1N4SMh53jRuEWYI0ftfh0oTj7Iw74q_aHjOHI5_bGrbE4TYNZ6uxuElo6FwFMwTNoKO4zR69FdKQ7kpDt1NvXDQl8NKgkYUg3urgfmgQxlJ0JBe6oiW4eJhbyg4NiOiNfC_v79hD87cgxbzAQBBnMYHhVcC7UdS\\x26random\\x3d2567710181\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587402849\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3FsiELsEa3DsrBALVRuCSK6vL9gOiKNFLVzMCmeADthFjQV17GquLtPYMyOZnq5Ix0yLESa4tTyYPvqNYFs_YToHgBsY6qjLJc8QHCaG_IL2yuKGX4o_BcSAVVBRdlTdvBV5qVybX3BieSnk9WhnwWDEOqVhcLTLmy1-qIe44kA3HL-qUqidV6cEQiCrJckhRzYLQvxYBnkpgsT2Y3o7kmh_wX0bqg79onRFMkDklQQQ35_HyPyd0LoZMHQ3U3hGuN0K0XDyiAX8k_laIGmk3iisp05bS02RazDvxtSBeTECyNhngwiLoBocVmjXSOaJEb78MzW4\\x26random\\x3d3637030327\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587403746\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_start\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_start\\x26gap.fsrc\\x3d1\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3FqTurJ02cAY871GY6UPvKUTEpQBp0bBdduTKy49cvPn9BRWl049twfmiZSrM2eRsWAf_98WTSEpTnxzSBQwyE5ousKmjhAJMQfq710bh6D3XwDAgT5R1WpLucu1R2QE8LxjZwse1fNGHzb_wXsScXWMypRq7QdH7vgEocgJ1DyqayQjqvugr1h8cHoUecIEpU922ee86FZKyavqeW8bJd8CkYC5e5HDLcD4UAGhvy8ZxjEjBXKYTaq0wl6-1g7OX_2DhFvCBBzizx37z7etQIO6kGYuYvXKrW0VcO0jb7rxKqwTpTk_MbcLYazxO96rU8h3Bw-q\\x26random\\x3d747637782\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587403750\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dform_submit\\x26gtm\\x3d45be69n1v9203804702za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121280969\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Femail-testing%2F\\x26rcb\\x3d12\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Email%20Testing\\x26ae\\x3da\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dform_submit\\x26gap.fsrc\\x3d2\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3HB6oMdOYN0sTLekCXXoBzQAL_qNeKVZfK_vfhQc2lzfRQaWEJILWdaWCj4pCng5HN6VX_BjT7ZHKsjOtyt_cHsPytPqX5cIF8rPWqiVoHje5sSgDYRPk1sPoTkEqVHn2-kBKvGtHFK3ZZVMH38MZE3ahnXf3O8cbHurph6QtKkT9Mkh2h_SOcPOmKXWvhkysbPBtEbLpJtJypdF2LfDaN9oyAj1Yfpjv2Yl4ktRAb6D7Wpxcm4FjicT4IDj9dlxhwdbTZCNriSdoOBpNbF3SSI19aDM0jpPJyXTb95VdwaBq7IHrwUQ5jdGkLmIXncVLd4QxgGp\\x26random\\x3d1532877886\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.google.com/pagead/1p-user-list/700498227/?random\\x3d1790587416392\\x26cv\\x3d11\\x26fst\\x3d1790586000000\\x26bg\\x3dffffff\\x26guid\\x3dON\\x26async\\x3d1\\x26en\\x3dgtag.config\\x26gtm\\x3d45be69n1v9203804702z8893108960za20gzb893108960zd893108960xecxf1\\x26gcd\\x3d13l3l3l3l1l1\\x26dma\\x3d0\\x26tag_exp\\x3d115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153\\x26u_w\\x3d1512\\x26u_h\\x3d982\\x26url\\x3dhttps%3A%2F%2Fapp-us.smtp2go.com%2Fdashboard%2Fmain%2F\\x26rcb\\x3d3\\x26frm\\x3d0\\x26tiba\\x3dSMTP2GO%20%7C%20Dashboard\\x26hn\\x3dwww.googleadservices.com\\x26npa\\x3d0\\x26pscdl\\x3dnoapi\\x26auid\\x3d2111033616.1790587091\\x26uaa\\x3darm\\x26uab\\x3d64\\x26uafvl\\x3dGoogle%2520Chrome%3B153.0.8010.53%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.53\\x26uamb\\x3d0\\x26uam\\x3d\\x26uap\\x3dmacOS\\x26uapv\\x3d26.6.2\\x26uaw\\x3d0\\x26data\\x3devent%3Dgtag.config\\x26ept\\x3d9\\x26rfmt\\x3d3\\x26fmt\\x3d3\\x26is_vtc\\x3d1\\x26cid\\x3dCAQS-gEAQM4h3GuQirYFvAdVBOhjj_9_H415dBLjkVmax2u_iMbNlSukxAOlf-slMHGYhInzlwDL_KUFfjIAn5G0ldvCg5f6M2IBkHH-4Myn9tQmS-xCmV7V8VfTFzKEap76V2xWA1pqRmMdonP7nLHLn_3yp98Q_3WLfayYKszAMhqeV_3GAiK_WObDlWDsAYxf63HxEiNvUnbVpT0iczpWGHqdM92Gb6roiiiD7v5c5zcWXSIkSQD2r1wb-NIn5uiPpyOv-DNWlHoK5fdoqJGl6a7MroloCSYxh5tDmi9BSTKYlxrLnJi36Pe9bpJqRtqLIZ7sgBIXjvr3FTJL\\x26random\\x3d1600838748\\x26rmt_tld\\x3d0\\x26ipr\\x3dy",
+    "https://www.googleadservices.com",
+    "https://www.googletagmanager.com",
+    "https://www.googletagmanager.com/",
+    "https://www.googletagmanager.com/static/service_worker/",
+    "https://www.redditstatic.com/ads/pixel.js",
+    "https://www.redditstatic.com/campaign-management/",
+    "https://www.smtp2go.com/setupguide/salesforce/",
+    "https://www.youtube.com"
+  ],
+  "js_secrets": [],
+  "notable_responses": [],
+  "storage": {
+    "https://app-us.smtp2go.com/dashboard/main/?None=": {
+      "local": [
+        "ZD-store",
+        "ZD-suid",
+        "_uetvid_exp",
+        "ZD-settings",
+        "_uetsid_exp",
+        "ZD-buid",
+        "{announcekit}:57544",
+        "_uetvid",
+        "graphcolors.1",
+        "_gcl_ls",
+        "_uetsid",
+        "__zlcstore"
+      ],
+      "session": [
+        "_rdt_cfg",
+        "_cltk"
+      ]
+    },
+    "https://app-us.smtp2go.com/email-testing": {
+      "local": [
+        "ZD-store",
+        "ZD-suid",
+        "_uetvid_exp",
+        "ZD-settings",
+        "_uetsid_exp",
+        "ZD-buid",
+        "{announcekit}:57544",
+        "_uetvid",
+        "graphcolors.1",
+        "_gcl_ls",
+        "_uetsid",
+        "__zlcstore"
+      ],
+      "session": [
+        "_rdt_cfg",
+        "_cltk"
+      ]
+    },
+    "https://app-us.smtp2go.com/settings/dedicatedips": {
+      "local": [
+        "ZD-store",
+        "ZD-suid",
+        "_uetvid_exp",
+        "ZD-settings",
+        "_uetsid_exp",
+        "ZD-buid",
+        "{announcekit}:57544",
+        "_uetvid",
+        "graphcolors.1",
+        "_gcl_ls",
+        "_uetsid",
+        "__zlcstore"
+      ],
+      "session": [
+        "_rdt_cfg",
+        "_cltk"
+      ]
+    }
+  }
+}

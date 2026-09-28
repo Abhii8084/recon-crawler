@@ -1,0 +1,8 @@
+smtp2go.com
+app.smtp2go.com
+api.smtp2go.com
+app-us.smtp2go.com
+-support.smtp2go.com
+-/hc/
+-/logout
+-/signout

@@ -1,0 +1,1261 @@
+{
+  "seed": "https://app.smtp2go.com",
+  "host": "app.smtp2go.com",
+  "pages_crawled": [
+    "https://app-us.smtp2go.com/dashboard/main",
+    "https://app.smtp2go.com"
+  ],
+  "links": [
+    "http://www.smtp2go.com/pricing",
+    "http://www.smtp2go.com/privacy",
+    "https://app.smtp2go.com/dashboard/team/",
+    "https://www.smtp2go.com",
+    "javascript:void(0);"
+  ],
+  "js_files": [
+    "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+    "https://app.smtp2go.com/static/js/functions.js?version=1790216816"
+  ],
+  "js_endpoints": [
+    "/dashboard/team/"
+  ],
+  "js_secrets": [],
+  "forms": [
+    {
+      "action": "https://app.smtp2go.com/api/login/",
+      "method": "post",
+      "inputs": [
+        {
+          "name": "red_deep_link",
+          "type": "hidden"
+        },
+        {
+          "name": "red_deep_query",
+          "type": "hidden"
+        },
+        {
+          "name": "username",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "type": "password"
+        },
+        {
+          "name": "remember_me",
+          "type": "checkbox"
+        }
+      ],
+      "found_on": "https://app.smtp2go.com"
+    },
+    {
+      "action": "https://app.smtp2go.com/forgot-password/",
+      "method": "post",
+      "inputs": [
+        {
+          "name": "email",
+          "type": "text"
+        }
+      ],
+      "found_on": "https://app.smtp2go.com"
+    }
+  ],
+  "params": [
+    "CSRF_key",
+    "login_id",
+    "unix_secs_end",
+    "unix_secs_start",
+    "v",
+    "version"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/login",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/js/functions.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "POST",
+      "url": "https://app.smtp2go.com/api/login",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/dashboard/main/?login_id=.eJwFwcuWQzAAANB_6dZCM6qOpbaIVwelxE4iMiIy0Smtfv3cu8uwvnph18B9l5gk4QaX6S3-uK4BKzOps42Wy-2mGEGXUsUSNLX5l1LE5-Ri28QomuIuTKg_rZGBU8x5cj_ZzeybW446He5lPTtiO8-M5Zn3MjbAJzUVVd8PMWrB-ilGKv2rrJ7SNZBD2P05gqBtIm84NEwLVKb1VvDAy4IpNyIpflZ9hb8ioKv2koPslX0OomNuackh7fyUl07NeITFVn89Qoq1E3ipBU6X8MwfDJcR-b5KQdQbjsAtcq_F-mi3PcoUP6DjO_bF7h9nBly5.arlcsg.MzWyPrkDykNmKdS2WPeZbWHAqDE&None",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/login",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/static/js/functions.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "POST",
+      "url": "https://app-us.smtp2go.com/api/login",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://app-us.smtp2go.com/api/login",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/end-points",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/main/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/notices/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/usage/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://app-us.smtp2go.com/zdesk_chat_auth?CSRF_key=FFddWbDPJrweqR%2FaEh4lSCldNDK%2Fc%2BTx%2Fzdh2r2VxZ4",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "http://app-us.smtp2go.com/dashboard/main",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/login",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app.smtp2go.com/static/js/functions.js?version=1790216816",
+      "resource_type": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/end-points",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/main/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/notices/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://app-us.smtp2go.com/api/dashboard/usage/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "resource_type": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://app-us.smtp2go.com/zdesk_chat_auth?CSRF_key=FFddWbDPJrweqR%2FaEh4lSCldNDK%2Fc%2BTx%2Fzdh2r2VxZ4",
+      "resource_type": "xhr"
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://app.smtp2go.com",
+      "status": 302,
+      "headers": {
+        "connection": "close",
+        "content-length": "201",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:01 GMT",
+        "location": "/login/",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/login",
+      "status": 200,
+      "headers": {
+        "connection": "close",
+        "content-encoding": "zstd",
+        "content-length": "2078",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:02 GMT",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37dd-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2343",
+        "date": "Sun, 27 Sep 2026 17:37:25 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "text/css"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1c20-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3068",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1787f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "33375",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"13e2-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2021",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37b2a-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "60468",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2548-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3530",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"e673-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "18689",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2254d-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "20418",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"5146-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "6482",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"108f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "1192",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/js/functions.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"c87f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "12167",
+        "date": "Sun, 27 Sep 2026 17:37:28 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/dashboard/main/?login_id=.eJwFwcuWQzAAANB_6dZCM6qOpbaIVwelxE4iMiIy0Smtfv3cu8uwvnph18B9l5gk4QaX6S3-uK4BKzOps42Wy-2mGEGXUsUSNLX5l1LE5-Ri28QomuIuTKg_rZGBU8x5cj_ZzeybW446He5lPTtiO8-M5Zn3MjbAJzUVVd8PMWrB-ilGKv2rrJ7SNZBD2P05gqBtIm84NEwLVKb1VvDAy4IpNyIpflZ9hb8ioKv2koPslX0OomNuackh7fyUl07NeITFVn89Qoq1E3ipBU6X8MwfDJcR-b5KQdQbjsAtcq_F-mi3PcoUP6DjO_bF7h9nBly5.arlcsg.MzWyPrkDykNmKdS2WPeZbWHAqDE&None",
+      "status": 302,
+      "headers": {
+        "connection": "close",
+        "content-length": "201",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:08 GMT",
+        "location": "/login/",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/api/login",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "447",
+        "date": "Sun, 27 Sep 2026 18:13:06 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/login",
+      "status": 200,
+      "headers": {
+        "connection": "close",
+        "content-encoding": "zstd",
+        "content-length": "2426",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:08 GMT",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37dd-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2343",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "text/css"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1c20-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3068",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1787f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "33375",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"13e2-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2021",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2548-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3530",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"5146-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "6482",
+        "date": "Sun, 27 Sep 2026 17:59:34 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2254d-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "20418",
+        "date": "Sun, 27 Sep 2026 17:59:34 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37b2a-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "60468",
+        "date": "Sun, 27 Sep 2026 17:59:33 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"e673-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "18689",
+        "date": "Sun, 27 Sep 2026 17:59:34 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"108f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "1192",
+        "date": "Sun, 27 Sep 2026 17:59:34 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/static/js/functions.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"c87f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "12167",
+        "date": "Sun, 27 Sep 2026 17:59:34 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/login",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "106",
+        "date": "Sun, 27 Sep 2026 18:13:17 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/login",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "454",
+        "date": "Sun, 27 Sep 2026 18:13:25 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "status": 200,
+      "headers": {
+        "connection": "close",
+        "content-encoding": "zstd",
+        "content-length": "17640",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:27 GMT",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/end-points",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "1556",
+        "date": "Sun, 27 Sep 2026 18:13:27 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/zdesk_chat_auth?CSRF_key=FFddWbDPJrweqR%2FaEh4lSCldNDK%2Fc%2BTx%2Fzdh2r2VxZ4",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "631",
+        "date": "Sun, 27 Sep 2026 18:13:29 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/usage/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "1094",
+        "date": "Sun, 27 Sep 2026 18:13:29 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/main/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "563",
+        "date": "Sun, 27 Sep 2026 18:13:29 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "status": 308,
+      "headers": {
+        "content-length": "269",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 08:13:08 GMT",
+        "location": "http://app-us.smtp2go.com/dashboard/main/",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "http://app-us.smtp2go.com/dashboard/main",
+      "status": 302,
+      "headers": {
+        "connection": "Keep-Alive",
+        "content-length": "266",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Sun, 27 Sep 2026 18:13:30 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "location": "https://app-us.smtp2go.com/dashboard/main/",
+        "server": "Apache"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com",
+      "status": 302,
+      "headers": {
+        "connection": "close",
+        "content-length": "201",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:30 GMT",
+        "location": "/login/",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/login",
+      "status": 200,
+      "headers": {
+        "connection": "close",
+        "content-encoding": "zstd",
+        "content-length": "2078",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:31 GMT",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/css/new-login.css?v=3&version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37dd-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2343",
+        "date": "Sun, 27 Sep 2026 17:37:25 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "text/css"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-1.11.0.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1787f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "33375",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-migrate-1.2.1.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"1c20-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3068",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"13e2-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "2021",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery.blockui.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2548-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "3530",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-validation/js/jquery.validate.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"5146-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "6482",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"e673-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "18689",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/moment-timezone-all-years.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"2254d-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "20418",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"37b2a-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "60468",
+        "date": "Sun, 27 Sep 2026 17:37:26 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/js/functions.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"c87f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "12167",
+        "date": "Sun, 27 Sep 2026 17:37:28 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app.smtp2go.com/static/assets/admin/pages/scripts/login-soft.js?version=1790216816",
+      "status": 200,
+      "headers": {
+        "content-encoding": "gzip",
+        "etag": "\"108f-65c3155637c00-gzip\"",
+        "accept-ranges": "bytes",
+        "content-length": "1192",
+        "date": "Sun, 27 Sep 2026 17:37:27 GMT",
+        "last-modified": "Thu, 24 Sep 2026 02:26:56 GMT",
+        "vary": "Accept-Encoding",
+        "server": "Apache",
+        "content-type": "application/javascript"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/notices/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "559",
+        "date": "Sun, 27 Sep 2026 18:13:30 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/dashboard/main",
+      "status": 200,
+      "headers": {
+        "connection": "close",
+        "content-encoding": "zstd",
+        "content-length": "17640",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 27 Sep 2026 18:13:32 GMT",
+        "server": "gunicorn",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/usage/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "1094",
+        "date": "Sun, 27 Sep 2026 18:13:33 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/main/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "564",
+        "date": "Sun, 27 Sep 2026 18:13:33 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/end-points",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "1555",
+        "date": "Sun, 27 Sep 2026 18:13:33 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/zdesk_chat_auth?CSRF_key=FFddWbDPJrweqR%2FaEh4lSCldNDK%2Fc%2BTx%2Fzdh2r2VxZ4",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "630",
+        "date": "Sun, 27 Sep 2026 18:13:34 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "url": "https://app-us.smtp2go.com/api/dashboard/notices/?unix_secs_start=1787875200&unix_secs_end=1790553599",
+      "status": 200,
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "content-encoding": "zstd",
+        "connection": "close",
+        "access-control-allow-credentials": "true",
+        "content-length": "557",
+        "date": "Sun, 27 Sep 2026 18:13:35 GMT",
+        "content-type": "application/json",
+        "vary": "Accept-Encoding",
+        "server": "gunicorn",
+        "x-frame-options": "DENY"
+      }
+    }
+  ],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()"
+    }
+  ],
+  "storage": {}
+}

@@ -1,0 +1,158 @@
+# Recon summary — externalbeta2.emaplan.com
+
+- **Target seed:** https://externalbeta2.emaplan.com/ema
+- **Crawled at:** 2026-09-28 14:28:20
+- **Hosts in scope:** auth.externalbeta2.emaplan.com, externalbeta2.emaplan.com
+
+## At a glance
+
+| What | Count |
+|------|------:|
+| Pages crawled | 3 |
+| Links found | 2 |
+| API / XHR endpoints | 8 |
+| Forms | 2 |
+| URL parameters | 21 |
+| JavaScript files | 5 |
+| Hidden endpoints (from JS) | 73 |
+| Possible secrets in JS | 1 |
+| Pages with storage data | 1 |
+
+## Response status codes
+
+- **200** — 89 response(s)
+- **201** — 2 response(s)
+- **301** — 2 response(s)
+- **302** — 7 response(s)
+
+## Pages crawled
+
+- https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=3nDa2Sud5HDeNrvt-dZn8JIYOTfT685B5ySlujULg80&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3Dbe9KjX9osaw4E8PipAFHXykXA6UkhrB7TDeex18w1F40i-TnStDvkXh0HS_MMcrr7g2LAzZHkp71H6Clt0onWo6e93TywB-Ful9q9BeMF6ZT7bpfgphWkNIasymXdj9NUeOf9bpIhcc5al-FNBR4MEGf1JlNTVGXb2oOWatkl6YYjORSd9DgkA4lm2FYPKEHZXzq1taeyCqfubjEI5I4BBmr6u39-FyWa2HAFfAh8EluWIDOmrjCIdY0qz6_Ef-e120zPXJGNlDFqu_2PqBWnHuKbbkKrILVt-X2yf2sECIpgU1qnKqFTB_-nv18MjGOSN4EzY-z9eMwrfOrtiYZ06dP6_oUPfdmXHMvaiOMYmpK0kuei8NC-pk-PrSPpWfVkiTw8Gg0Ax8l6EJuSF0JBBnNZ2Q0z1MyNtPOHy8N9jIMhyQK0y93bUINGOfDo8wcVudjMMojYRptf_Y_8xO05r_9GuSedGD4sRlR93mYGWQT989vlm01CT_DcSvQ_0Ar6GqUw2eHsV8ZXoDlE-q3KnDCYngjmfaSeqjL8wYofAK12ADJGy5uMgtmeyI72vK5Y-v5Sspl6AwqRpQQaeZ46ntppnZSJk-n_RAE__KwT0K5roj6YsCv3BL7uPImnAGkWOBkYn2M0sjUbmfNDg8_ypWk0R6Hqz1gXqQ121bpHR3jyKLtjNSmzs-BWd8VTafZlsbccamgvqnYjp3dgTQnNCopx3K91qCRFgYMQlqpC5vv-UjPNeF4jrSwJ8MZ8WxydP9n4Q4qCh-wWTHJZi8OWM9k-Q6dgjurEGFviDP89vBtVVRKOdMKO9kNcyKp47IcYOD7GC5mWwMhQT-L2PdM02pw0unBaKxql6DQZvocCxAxlEY110lt8Lje7YxcP6UsSl8_q5qQqTakie5nuuG1_3R8tSvx4BPyualVIGyTjnKNCZ-Szp390Wosfaq5btfQG1_nV6CTZlTLy_JVJF6V0r09mOlkPLup6EweJlIPuhtrQa__lwCMQ7p-f_RBVSQNZKyv5ITNnL_c-Nzzf30Zl1Fq2Nr9iZTrvpWLDbtivmblyT7RW6FIe4C0cZtp-W7jnhwMeLLsFmvrAUMAx5-nPiUm-VAZ9Im5M31Poqq533ySCJpIgGXPrrIJykDC1cAuh2QgTyKqj99NytUeXqFlDbSQnI2Z709Bv_g_xg5mRQbimm3XcNInHPIqaEGbYIyINfq9F-P0xnBqM8TrKNwAGSCcIkghuHXniP3iCbnBs-v0bwUYxOYa25cBjlqUGe7T_h_xfGCMrARJCeeM7CyBabl86PnPTtXx5Tln-KFenh-U5dgBN5wdA5mvKQPXTE2cD-NV2jB1gusr5-L9ssktgDXuExdroILGhKIc9AfDC1KkKvKgndXy3z7kRqLB-Cd-hwNerUFpu0tJ8cGb7gniI3Mljrgjk9k8_gctPsXAvKBVMpN-SaHgp84HeKLAUodLzmhe3Qh2pbbsYthjRvIgD1ynbH2JRSEWHCbSOrdaXOPvIEMF1a8ZW9VKUrSc2sqx0mN-I95BHhOh_QNa1V1W4rmahpTSrbOCw86qPDqw-De_fWV9ONOjoUnAUaAa6K7lhjYJHrKdgiB9saUaPd7Xdx3AYYcM5VvZY3IZiKqAHRRjoNRqfyBEjGT9degiSbUcqOkXCyGX4Lt2xfc3t8cAULuInbvbYbngcl3Zg6lGJAqRr6dQ9hJIeBcTk7BHlE1f7aeM06_9UNLlcrZEInxGdIkte5SJFLhWnN2HvsZcJ0n0EMb2rYSQUAIwIKqwXizFH0U7umUXhl9K9jGCa4v4lQ1BeknUDUd83wq6HJAWxkhiJRzqYoc8OLiJ_lo5oDMMaV94n8WCR5QwdBbLN8U8XOts97uhjDl3_rroA1igQJ7GhXaqBuzlpOO7BACX45eUM-bjPvDXtSo_cR2clr4ujd8qcT5YKnY7DygX8JyA5GU5j26UUxoG1uFs1tnGU-dEowRFrmubiJb3M0i8GvdsXjtdFmcwhYieuujWtQh7FzSOcOKLlimcuV8cndDI-_bs2CxJyrSyReeU0kDXAnlIlMm7nEsoI3Ssq9h5eP-ClOQAoOxaEFy7tiId722h6UaGO--Ef743LjEaGhWhIlz-V87cEX8EBhQBRsu7F5DUwKbQrfmFWjSG4IXbmQFZMEZ4I3N566IInZ_ZmJw0WQg_ELQ7L0FjgUlxmwUXa3dwfUZSfuLns8XnMkxU2DL-j3-g&response_mode=form_post&nonce=639261826713249346.YzE1M2IyZjItYWU2NS00MWZmLTg3MWUtZTZiNjc3NjY2ZjRi&login_hint=H1Advisor01091&partner=ema&office=ema%2Fhackerone&logo=imageresources%2Fema%2F737%2FFiles%2FImages%2FIcons%2FPortalPrimary.png%3Fv%3D1789475044861&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0
+- https://externalbeta2.emaplan.com/ema
+- https://externalbeta2.emaplan.com/ema/SignIn?ema%2Fhackerone&userName=H1Advisor01091
+
+## API / XHR endpoints (likely the interesting ones)
+
+- `DELETE https://auth.externalbeta2.emaplan.com//api/v1/sessions/me`
+- `GET https://auth.externalbeta2.emaplan.com/api/internal/brand/theme/style-sheet?touch-point=SIGN_IN_PAGE&v=bfdbe22ada7761bc8c6c1210b47e1a85becbf81c599bc0b94cb7f3a13d26012e1afff23b39acf61777606e994baf32ad`
+- `POST https://auth.externalbeta2.emaplan.com/api/v1/internal/device/nonce`
+- `POST https://auth.externalbeta2.emaplan.com/idp/idx/challenge/answer`
+- `POST https://auth.externalbeta2.emaplan.com/idp/idx/identify`
+- `POST https://auth.externalbeta2.emaplan.com/idp/idx/introspect`
+- `POST https://externalbeta2.emaplan.com/QCh0T07Ua/dqxfhA/B7BuK/TsNMczs/SE5pLmzGaN2Smcuk5u/WBIbQg/bCMK/KXd2bz4`
+- `POST https://externalbeta2.emaplan.com/akam/13/pixel_77a47c16`
+
+## Forms (possible input / injection points)
+
+- **POST** `https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize`
+  - on: https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=3nDa2Sud5HDeNrvt-dZn8JIYOTfT685B5ySlujULg80&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3Dbe9KjX9osaw4E8PipAFHXykXA6UkhrB7TDeex18w1F40i-TnStDvkXh0HS_MMcrr7g2LAzZHkp71H6Clt0onWo6e93TywB-Ful9q9BeMF6ZT7bpfgphWkNIasymXdj9NUeOf9bpIhcc5al-FNBR4MEGf1JlNTVGXb2oOWatkl6YYjORSd9DgkA4lm2FYPKEHZXzq1taeyCqfubjEI5I4BBmr6u39-FyWa2HAFfAh8EluWIDOmrjCIdY0qz6_Ef-e120zPXJGNlDFqu_2PqBWnHuKbbkKrILVt-X2yf2sECIpgU1qnKqFTB_-nv18MjGOSN4EzY-z9eMwrfOrtiYZ06dP6_oUPfdmXHMvaiOMYmpK0kuei8NC-pk-PrSPpWfVkiTw8Gg0Ax8l6EJuSF0JBBnNZ2Q0z1MyNtPOHy8N9jIMhyQK0y93bUINGOfDo8wcVudjMMojYRptf_Y_8xO05r_9GuSedGD4sRlR93mYGWQT989vlm01CT_DcSvQ_0Ar6GqUw2eHsV8ZXoDlE-q3KnDCYngjmfaSeqjL8wYofAK12ADJGy5uMgtmeyI72vK5Y-v5Sspl6AwqRpQQaeZ46ntppnZSJk-n_RAE__KwT0K5roj6YsCv3BL7uPImnAGkWOBkYn2M0sjUbmfNDg8_ypWk0R6Hqz1gXqQ121bpHR3jyKLtjNSmzs-BWd8VTafZlsbccamgvqnYjp3dgTQnNCopx3K91qCRFgYMQlqpC5vv-UjPNeF4jrSwJ8MZ8WxydP9n4Q4qCh-wWTHJZi8OWM9k-Q6dgjurEGFviDP89vBtVVRKOdMKO9kNcyKp47IcYOD7GC5mWwMhQT-L2PdM02pw0unBaKxql6DQZvocCxAxlEY110lt8Lje7YxcP6UsSl8_q5qQqTakie5nuuG1_3R8tSvx4BPyualVIGyTjnKNCZ-Szp390Wosfaq5btfQG1_nV6CTZlTLy_JVJF6V0r09mOlkPLup6EweJlIPuhtrQa__lwCMQ7p-f_RBVSQNZKyv5ITNnL_c-Nzzf30Zl1Fq2Nr9iZTrvpWLDbtivmblyT7RW6FIe4C0cZtp-W7jnhwMeLLsFmvrAUMAx5-nPiUm-VAZ9Im5M31Poqq533ySCJpIgGXPrrIJykDC1cAuh2QgTyKqj99NytUeXqFlDbSQnI2Z709Bv_g_xg5mRQbimm3XcNInHPIqaEGbYIyINfq9F-P0xnBqM8TrKNwAGSCcIkghuHXniP3iCbnBs-v0bwUYxOYa25cBjlqUGe7T_h_xfGCMrARJCeeM7CyBabl86PnPTtXx5Tln-KFenh-U5dgBN5wdA5mvKQPXTE2cD-NV2jB1gusr5-L9ssktgDXuExdroILGhKIc9AfDC1KkKvKgndXy3z7kRqLB-Cd-hwNerUFpu0tJ8cGb7gniI3Mljrgjk9k8_gctPsXAvKBVMpN-SaHgp84HeKLAUodLzmhe3Qh2pbbsYthjRvIgD1ynbH2JRSEWHCbSOrdaXOPvIEMF1a8ZW9VKUrSc2sqx0mN-I95BHhOh_QNa1V1W4rmahpTSrbOCw86qPDqw-De_fWV9ONOjoUnAUaAa6K7lhjYJHrKdgiB9saUaPd7Xdx3AYYcM5VvZY3IZiKqAHRRjoNRqfyBEjGT9degiSbUcqOkXCyGX4Lt2xfc3t8cAULuInbvbYbngcl3Zg6lGJAqRr6dQ9hJIeBcTk7BHlE1f7aeM06_9UNLlcrZEInxGdIkte5SJFLhWnN2HvsZcJ0n0EMb2rYSQUAIwIKqwXizFH0U7umUXhl9K9jGCa4v4lQ1BeknUDUd83wq6HJAWxkhiJRzqYoc8OLiJ_lo5oDMMaV94n8WCR5QwdBbLN8U8XOts97uhjDl3_rroA1igQJ7GhXaqBuzlpOO7BACX45eUM-bjPvDXtSo_cR2clr4ujd8qcT5YKnY7DygX8JyA5GU5j26UUxoG1uFs1tnGU-dEowRFrmubiJb3M0i8GvdsXjtdFmcwhYieuujWtQh7FzSOcOKLlimcuV8cndDI-_bs2CxJyrSyReeU0kDXAnlIlMm7nEsoI3Ssq9h5eP-ClOQAoOxaEFy7tiId722h6UaGO--Ef743LjEaGhWhIlz-V87cEX8EBhQBRsu7F5DUwKbQrfmFWjSG4IXbmQFZMEZ4I3N566IInZ_ZmJw0WQg_ELQ7L0FjgUlxmwUXa3dwfUZSfuLns8XnMkxU2DL-j3-g&response_mode=form_post&nonce=639261826713249346.YzE1M2IyZjItYWU2NS00MWZmLTg3MWUtZTZiNjc3NjY2ZjRi&login_hint=H1Advisor01091&partner=ema&office=ema%2Fhackerone&logo=imageresources%2Fema%2F737%2FFiles%2FImages%2FIcons%2FPortalPrimary.png%3Fv%3D1789475044861&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0
+  - fields: credentials.passcode
+- **POST** `https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize`
+  - on: https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=3nDa2Sud5HDeNrvt-dZn8JIYOTfT685B5ySlujULg80&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3Dbe9KjX9osaw4E8PipAFHXykXA6UkhrB7TDeex18w1F40i-TnStDvkXh0HS_MMcrr7g2LAzZHkp71H6Clt0onWo6e93TywB-Ful9q9BeMF6ZT7bpfgphWkNIasymXdj9NUeOf9bpIhcc5al-FNBR4MEGf1JlNTVGXb2oOWatkl6YYjORSd9DgkA4lm2FYPKEHZXzq1taeyCqfubjEI5I4BBmr6u39-FyWa2HAFfAh8EluWIDOmrjCIdY0qz6_Ef-e120zPXJGNlDFqu_2PqBWnHuKbbkKrILVt-X2yf2sECIpgU1qnKqFTB_-nv18MjGOSN4EzY-z9eMwrfOrtiYZ06dP6_oUPfdmXHMvaiOMYmpK0kuei8NC-pk-PrSPpWfVkiTw8Gg0Ax8l6EJuSF0JBBnNZ2Q0z1MyNtPOHy8N9jIMhyQK0y93bUINGOfDo8wcVudjMMojYRptf_Y_8xO05r_9GuSedGD4sRlR93mYGWQT989vlm01CT_DcSvQ_0Ar6GqUw2eHsV8ZXoDlE-q3KnDCYngjmfaSeqjL8wYofAK12ADJGy5uMgtmeyI72vK5Y-v5Sspl6AwqRpQQaeZ46ntppnZSJk-n_RAE__KwT0K5roj6YsCv3BL7uPImnAGkWOBkYn2M0sjUbmfNDg8_ypWk0R6Hqz1gXqQ121bpHR3jyKLtjNSmzs-BWd8VTafZlsbccamgvqnYjp3dgTQnNCopx3K91qCRFgYMQlqpC5vv-UjPNeF4jrSwJ8MZ8WxydP9n4Q4qCh-wWTHJZi8OWM9k-Q6dgjurEGFviDP89vBtVVRKOdMKO9kNcyKp47IcYOD7GC5mWwMhQT-L2PdM02pw0unBaKxql6DQZvocCxAxlEY110lt8Lje7YxcP6UsSl8_q5qQqTakie5nuuG1_3R8tSvx4BPyualVIGyTjnKNCZ-Szp390Wosfaq5btfQG1_nV6CTZlTLy_JVJF6V0r09mOlkPLup6EweJlIPuhtrQa__lwCMQ7p-f_RBVSQNZKyv5ITNnL_c-Nzzf30Zl1Fq2Nr9iZTrvpWLDbtivmblyT7RW6FIe4C0cZtp-W7jnhwMeLLsFmvrAUMAx5-nPiUm-VAZ9Im5M31Poqq533ySCJpIgGXPrrIJykDC1cAuh2QgTyKqj99NytUeXqFlDbSQnI2Z709Bv_g_xg5mRQbimm3XcNInHPIqaEGbYIyINfq9F-P0xnBqM8TrKNwAGSCcIkghuHXniP3iCbnBs-v0bwUYxOYa25cBjlqUGe7T_h_xfGCMrARJCeeM7CyBabl86PnPTtXx5Tln-KFenh-U5dgBN5wdA5mvKQPXTE2cD-NV2jB1gusr5-L9ssktgDXuExdroILGhKIc9AfDC1KkKvKgndXy3z7kRqLB-Cd-hwNerUFpu0tJ8cGb7gniI3Mljrgjk9k8_gctPsXAvKBVMpN-SaHgp84HeKLAUodLzmhe3Qh2pbbsYthjRvIgD1ynbH2JRSEWHCbSOrdaXOPvIEMF1a8ZW9VKUrSc2sqx0mN-I95BHhOh_QNa1V1W4rmahpTSrbOCw86qPDqw-De_fWV9ONOjoUnAUaAa6K7lhjYJHrKdgiB9saUaPd7Xdx3AYYcM5VvZY3IZiKqAHRRjoNRqfyBEjGT9degiSbUcqOkXCyGX4Lt2xfc3t8cAULuInbvbYbngcl3Zg6lGJAqRr6dQ9hJIeBcTk7BHlE1f7aeM06_9UNLlcrZEInxGdIkte5SJFLhWnN2HvsZcJ0n0EMb2rYSQUAIwIKqwXizFH0U7umUXhl9K9jGCa4v4lQ1BeknUDUd83wq6HJAWxkhiJRzqYoc8OLiJ_lo5oDMMaV94n8WCR5QwdBbLN8U8XOts97uhjDl3_rroA1igQJ7GhXaqBuzlpOO7BACX45eUM-bjPvDXtSo_cR2clr4ujd8qcT5YKnY7DygX8JyA5GU5j26UUxoG1uFs1tnGU-dEowRFrmubiJb3M0i8GvdsXjtdFmcwhYieuujWtQh7FzSOcOKLlimcuV8cndDI-_bs2CxJyrSyReeU0kDXAnlIlMm7nEsoI3Ssq9h5eP-ClOQAoOxaEFy7tiId722h6UaGO--Ef743LjEaGhWhIlz-V87cEX8EBhQBRsu7F5DUwKbQrfmFWjSG4IXbmQFZMEZ4I3N566IInZ_ZmJw0WQg_ELQ7L0FjgUlxmwUXa3dwfUZSfuLns8XnMkxU2DL-j3-g&response_mode=form_post&nonce=639261826713249346.YzE1M2IyZjItYWU2NS00MWZmLTg3MWUtZTZiNjc3NjY2ZjRi&login_hint=H1Advisor01091&partner=ema&office=ema%2Fhackerone&logo=imageresources%2Fema%2F737%2FFiles%2FImages%2FIcons%2FPortalPrimary.png%3Fv%3D1789475044861&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0
+  - fields: credentials.passcode
+
+## URL parameters seen
+
+`client_id`, `code_challenge`, `code_challenge_method`, `enable_spi_sso`, `login_hint`, `logo`, `nonce`, `office`, `partner`, `post_logout_redirect_uri`, `redirect_uri`, `response_mode`, `response_type`, `scope`, `state`, `stateToken`, `touch-point`, `userName`, `v`, `x-client-SKU`, `x-client-ver`
+
+## JavaScript files (worth mining for hidden endpoints)
+
+- https://auth.externalbeta2.emaplan.com/HqEaNk/iKem/t/h/_R0jkAE4cTkahnM/XupaJSDb1LzNhV9f/WlluOA/OFJ/0FCotO20
+- https://emacontent.com/okta-widget/1.0.67/main.js
+- https://ok10static2.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.d4f8b33efa60705220b2a7cf56e43e20.js
+- https://ok10static2.oktacdn.com/assets/js/sdk/okta-signin-widget/7.48.2/js/okta-sign-in.min.js
+- https://s2.go-mpulse.net/boomerang/DASML-QSKNT-6X5KT-8N8KT-H5CMM
+
+## Hidden endpoints extracted from JavaScript
+
+These paths/URLs were found *inside* the JS bundles — they are not linked anywhere on the pages, so they're prime recon leads:
+
+- `/api/v1/altcha`
+- `/api/v1/authn`
+- `/api/v1/authn/introspect`
+- `/api/v1/authn/recovery/password`
+- `/api/v1/authn/recovery/token`
+- `/api/v1/authn/recovery/unlock`
+- `/api/v1/registration/`
+- `/api/v1/registration/form`
+- `/api/v1/sessions/me`
+- `/api/v1/sessions/me/lifecycle/refresh`
+- `/auth/services/devicefingerprint`
+- `/help/login`
+- `/idp/idx/introspect`
+- `/idp/myaccount/emails`
+- `/idp/myaccount/emails/`
+- `/idp/myaccount/password`
+- `/idp/myaccount/phones`
+- `/idp/myaccount/phones/`
+- `/idp/myaccount/profile`
+- `/idp/myaccount/profile/schema`
+- `/img/logos/default.png`
+- `/img/security/default.png`
+- `/img/security/unknown-device.png`
+- `/img/security/unknown.png`
+- `/labels/json/`
+- `/login/sessionCookieRedirect`
+- `/oauth2`
+- `/oauth2/`
+- `/oauth2/default`
+- `/sso/idps/`
+- `/v1/authorize`
+- `/v1/interact`
+- `/v1/logout`
+- `/v1/revoke`
+- `/v1/token`
+- `/v1/userinfo`
+- `http://a`
+- `http://a#б`
+- `http://a/c%20d?a=1&c=3`
+- `http://www.w3.org/2000/svg`
+- `http://x`
+- `http://тест`
+- `https://a@b`
+- `https://apps.apple.com/us/app/okta-verify/id490179405`
+- `https://c.go-mpulse.net/api/config.json`
+- `https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.otf`
+- `https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.woff`
+- `https://emacontent.com/libs/econs/0.3/fonts/econs-0.3.woff2`
+- `https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap`
+- `https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap\`
+- `https://github.com/zloirock/core-js`
+- `https://github.com/zloirock/core-js/blob/v3.26.1/LICENSE`
+- `https://global.oktacdn.com/okta-signin-widget/`
+- `https://hcaptcha.com/1/api.js`
+- `https://hcaptcha.com/privacy`
+- `https://hcaptcha.com/terms`
+- `https://incode.id/privacy`
+- `https://incode.id/terms`
+- `https://itunes.apple.com/us/app/google-authenticator/id388497605`
+- `https://itunes.apple.com/us/app/okta-mobile/id580709251?mt=8`
+- `https://itunes.apple.com/us/app/okta-verify/id490179405`
+- `https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2`
+- `https://play.google.com/store/apps/details?id=com.okta.android.auth`
+- `https://withpersona.com/legal/privacy-policy`
+- `https://withpersona.com/legal/terms-of-use`
+- `https://www.clearme.com/member-terms`
+- `https://www.clearme.com/privacy-policy`
+- `https://www.duosecurity.com/docs/duoweb#3.-show-the-iframe`
+- `https://www.google.com/recaptcha/api.js`
+- `https://www.okta.com/okta-consumer-products-terms/`
+- `https://www.okta.com/privacy-policy/`
+- `https://{yourOktaDomain}.com/oauth2/{authServerId}`
+- `https://{yourOktaDomain}.com})`
+
+## ⚠️ Possible secrets spotted in JavaScript
+
+Heuristic matches — verify by hand, many are false positives, and treat anything real as sensitive:
+
+- **Generic api_key** in https://ok10static2.oktacdn.com/assets/js/sdk/okta-signin-widget/7.48.2/js/okta-sign-in.min.js
+  - `token":"enrollSymantecVip"`
+
+## Browser storage found (may leak tokens / config)
+
+- https://auth.externalbeta2.emaplan.com/oauth2/default/v1/authorize?client_id=0oaedsgzjxZlGjbOX4h7&redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema%2Fauthorization-code%2Fcallback&response_type=code&scope=openid%20profile&code_challenge=3nDa2Sud5HDeNrvt-dZn8JIYOTfT685B5ySlujULg80&code_challenge_method=S256&state=OpenIdConnect.AuthenticationProperties%3Dbe9KjX9osaw4E8PipAFHXykXA6UkhrB7TDeex18w1F40i-TnStDvkXh0HS_MMcrr7g2LAzZHkp71H6Clt0onWo6e93TywB-Ful9q9BeMF6ZT7bpfgphWkNIasymXdj9NUeOf9bpIhcc5al-FNBR4MEGf1JlNTVGXb2oOWatkl6YYjORSd9DgkA4lm2FYPKEHZXzq1taeyCqfubjEI5I4BBmr6u39-FyWa2HAFfAh8EluWIDOmrjCIdY0qz6_Ef-e120zPXJGNlDFqu_2PqBWnHuKbbkKrILVt-X2yf2sECIpgU1qnKqFTB_-nv18MjGOSN4EzY-z9eMwrfOrtiYZ06dP6_oUPfdmXHMvaiOMYmpK0kuei8NC-pk-PrSPpWfVkiTw8Gg0Ax8l6EJuSF0JBBnNZ2Q0z1MyNtPOHy8N9jIMhyQK0y93bUINGOfDo8wcVudjMMojYRptf_Y_8xO05r_9GuSedGD4sRlR93mYGWQT989vlm01CT_DcSvQ_0Ar6GqUw2eHsV8ZXoDlE-q3KnDCYngjmfaSeqjL8wYofAK12ADJGy5uMgtmeyI72vK5Y-v5Sspl6AwqRpQQaeZ46ntppnZSJk-n_RAE__KwT0K5roj6YsCv3BL7uPImnAGkWOBkYn2M0sjUbmfNDg8_ypWk0R6Hqz1gXqQ121bpHR3jyKLtjNSmzs-BWd8VTafZlsbccamgvqnYjp3dgTQnNCopx3K91qCRFgYMQlqpC5vv-UjPNeF4jrSwJ8MZ8WxydP9n4Q4qCh-wWTHJZi8OWM9k-Q6dgjurEGFviDP89vBtVVRKOdMKO9kNcyKp47IcYOD7GC5mWwMhQT-L2PdM02pw0unBaKxql6DQZvocCxAxlEY110lt8Lje7YxcP6UsSl8_q5qQqTakie5nuuG1_3R8tSvx4BPyualVIGyTjnKNCZ-Szp390Wosfaq5btfQG1_nV6CTZlTLy_JVJF6V0r09mOlkPLup6EweJlIPuhtrQa__lwCMQ7p-f_RBVSQNZKyv5ITNnL_c-Nzzf30Zl1Fq2Nr9iZTrvpWLDbtivmblyT7RW6FIe4C0cZtp-W7jnhwMeLLsFmvrAUMAx5-nPiUm-VAZ9Im5M31Poqq533ySCJpIgGXPrrIJykDC1cAuh2QgTyKqj99NytUeXqFlDbSQnI2Z709Bv_g_xg5mRQbimm3XcNInHPIqaEGbYIyINfq9F-P0xnBqM8TrKNwAGSCcIkghuHXniP3iCbnBs-v0bwUYxOYa25cBjlqUGe7T_h_xfGCMrARJCeeM7CyBabl86PnPTtXx5Tln-KFenh-U5dgBN5wdA5mvKQPXTE2cD-NV2jB1gusr5-L9ssktgDXuExdroILGhKIc9AfDC1KkKvKgndXy3z7kRqLB-Cd-hwNerUFpu0tJ8cGb7gniI3Mljrgjk9k8_gctPsXAvKBVMpN-SaHgp84HeKLAUodLzmhe3Qh2pbbsYthjRvIgD1ynbH2JRSEWHCbSOrdaXOPvIEMF1a8ZW9VKUrSc2sqx0mN-I95BHhOh_QNa1V1W4rmahpTSrbOCw86qPDqw-De_fWV9ONOjoUnAUaAa6K7lhjYJHrKdgiB9saUaPd7Xdx3AYYcM5VvZY3IZiKqAHRRjoNRqfyBEjGT9degiSbUcqOkXCyGX4Lt2xfc3t8cAULuInbvbYbngcl3Zg6lGJAqRr6dQ9hJIeBcTk7BHlE1f7aeM06_9UNLlcrZEInxGdIkte5SJFLhWnN2HvsZcJ0n0EMb2rYSQUAIwIKqwXizFH0U7umUXhl9K9jGCa4v4lQ1BeknUDUd83wq6HJAWxkhiJRzqYoc8OLiJ_lo5oDMMaV94n8WCR5QwdBbLN8U8XOts97uhjDl3_rroA1igQJ7GhXaqBuzlpOO7BACX45eUM-bjPvDXtSo_cR2clr4ujd8qcT5YKnY7DygX8JyA5GU5j26UUxoG1uFs1tnGU-dEowRFrmubiJb3M0i8GvdsXjtdFmcwhYieuujWtQh7FzSOcOKLlimcuV8cndDI-_bs2CxJyrSyReeU0kDXAnlIlMm7nEsoI3Ssq9h5eP-ClOQAoOxaEFy7tiId722h6UaGO--Ef743LjEaGhWhIlz-V87cEX8EBhQBRsu7F5DUwKbQrfmFWjSG4IXbmQFZMEZ4I3N566IInZ_ZmJw0WQg_ELQ7L0FjgUlxmwUXa3dwfUZSfuLns8XnMkxU2DL-j3-g&response_mode=form_post&nonce=639261826713249346.YzE1M2IyZjItYWU2NS00MWZmLTg3MWUtZTZiNjc3NjY2ZjRi&login_hint=H1Advisor01091&partner=ema&office=ema%2Fhackerone&logo=imageresources%2Fema%2F737%2FFiles%2FImages%2FIcons%2FPortalPrimary.png%3Fv%3D1789475044861&enable_spi_sso=False&post_logout_redirect_uri=https%3A%2F%2Fexternalbeta2.emaplan.com%2Fema&x-client-SKU=ID_NET472&x-client-ver=8.22.0.0
+  - localStorage keys: ak_a, ak_ax
+  - sessionStorage keys: osw-oie-state-handle, osw-oie-last-initiated-login-url, okta-transaction-storage
+
+---
+*Full machine-readable detail is in `report.json`; the live event log is in `notebook.jsonl`.*
